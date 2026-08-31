@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growvia Admin Dashboard</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #f0f2f5; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { color: #1a1a1a; margin-top: 0; border-bottom: 2px solid #e0e0e0; padding-bottom: 15px; }
+        .message-card { background: #fafafa; border: 1px solid #eaeaea; border-left: 4px solid #f95f2a; padding: 20px; margin-bottom: 20px; border-radius: 8px; }
+        .message-header { display: flex; justify-content: space-between; margin-bottom: 15px; }
+        .name { font-weight: bold; font-size: 1.1em; color: #333; }
+        .email { color: #666; font-size: 0.9em; }
+        .date { color: #888; font-size: 0.8em; }
+        .content { color: #444; line-height: 1.6; white-space: pre-wrap; background: white; padding: 15px; border: 1px solid #eee; border-radius: 6px; }
+        .empty-state { text-align: center; color: #888; padding: 40px 0; }
+        .refresh-btn { background: #f95f2a; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; float: right; margin-top: -55px; }
+        .refresh-btn:hover { background: #e04a18; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="refresh-btn" onclick="fetchMessages()">Refresh Messages</button>
+        <h1>Customer Messages</h1>
+        <div id="messages-container">
+            <div class="empty-state">Loading messages...</div>
+        </div>
+    </div>
+
+    <script>
+        async function fetchMessages() {
+            const container = document.getElementById('messages-container');
+            container.innerHTML = '<div class="empty-state">Loading...</div>';
+            
+            try {
+                const response = await fetch('/api/messages');
+                const messages = await response.json();
+                
+                if (messages.length === 0) {
+                    container.innerHTML = '<div class="empty-state">No messages received yet.</div>';
+                    return;
+                }
+                
+                container.innerHTML = '';
+                // Reverse to show newest first
+                messages.reverse().forEach(msg => {
+                    const date = new Date(msg.timestamp).toLocaleString();
+                    const card = document.createElement('div');
+                    card.className = 'message-card';
+                    card.innerHTML = `
+                        <div class="message-header">
+                            <div>
+                                <div class="name">${msg.name}</div>
+                                <div class="email"><a href="mailto:${msg.email}">${msg.email}</a></div>
+                            </div>
+                            <div class="date">${date}</div>
+                        </div>
+                        <div class="content">${msg.message}</div>
+                    `;
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                container.innerHTML = '<div class="empty-state" style="color: red;">Error loading messages. Please make sure the server is running.</div>';
+            }
+        }
+        
+        // Load messages on page load
+        fetchMessages();
+    </script>
+</body>
+</html>

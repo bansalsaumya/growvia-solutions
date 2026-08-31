@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Project Case Study | Saumya Bansal</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-charcoal);
+            font-family: 'Poppins', sans-serif;
+        }
+        .study-container {
+            max-width: 1400px;
+            margin: 120px auto 60px;
+            padding: 0 24px;
+        }
+        .study-wrapper-card {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 32px;
+            padding: 64px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+        }
+        .study-header {
+            margin-bottom: 48px;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 32px;
+        }
+        .study-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: rgba(242, 101, 34, 0.1);
+            color: var(--accent-gold);
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .study-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-charcoal);
+            line-height: 1.15;
+        }
+        .study-intro {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-top: 12px;
+        }
+        .back-link-custom {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 700;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+        .back-link-custom:hover {
+            transform: translateX(-5px);
+        }
+        .grid-detail-sections {
+            display: grid;
+            grid-template-columns: 1.6fr 0.8fr;
+            gap: 48px;
+            align-items: start;
+        }
+        .content-group {
+            margin-bottom: 48px;
+        }
+        .content-group h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-charcoal);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .content-group h2::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 24px;
+            background-color: var(--accent-gold);
+            border-radius: 4px;
+        }
+        .content-group p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .meta-sidebar {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-soft);
+            border-radius: 24px;
+            padding: 32px;
+        }
+        .meta-sidebar h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 12px;
+        }
+        .meta-list {
+            list-style: none;
+            padding: 0;
+        }
+        .meta-list li {
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 12px;
+        }
+        .meta-label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .meta-val {
+            font-weight: 700;
+            color: var(--text-charcoal);
+            font-size: 1rem;
+        }
+        .detailed-list {
+            padding-left: 20px;
+            margin-top: 16px;
+        }
+        .detailed-list li {
+            margin-bottom: 14px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header navigation matching current site -->
+    <header class="app-header" style="position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-soft);">
+        <div class="header-container" style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 700; text-decoration: none; color: var(--text-charcoal);">
+                <i class="fa-solid fa-heart brand-icon" style="color: var(--accent-gold);"></i>
+                <span>Growvia Solutions</span>
+            </a>
+            <nav class="nav-links" style="display: flex; gap: 24px;">
+                <a href="index.html#home" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">Home</a>
+                <a href="index.html#about" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">About us</a>
+                <a href="index.html#services" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">Services</a>
+                <a href="index.html#projects" class="nav-link active" style="text-decoration: none; color: var(--accent-gold); font-weight: 600;">Projects</a>
+                <a href="index.html#contact" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">Contact us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="study-container">
+        <a href="projects.html" class="back-link-custom">← Back to Projects</a>
+
+        <div class="study-wrapper-card">
+            
+            <div class="study-header">
+                <span class="study-badge">Real Estate Case Study</span>
+                <h1>03 — Real Estate Project</h1>
+                <p class="study-intro">Instagram Branding & Property Promotions</p>
+                <div style="margin-top: 32px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-soft);">
+                    <img src="https://saumya-digital-marketing-portfolio.vercel.app/realstate-mockup.png.png.png" alt="Real Estate Project Brand Mockup Proof" style="width: 100%; height: auto; display: block;">
+                </div>
+            </div>
+
+            <div class="grid-detail-sections">
+                <div>
+                    <div class="content-group">
+                        <h2>The Challenge</h2>
+                        <p>
+                            The client required high-converting social media marketing and visual assets for property listings. Real estate feeds rely heavily on polished imagery, structured captions detailing amenities (e.g., location, area size, price), and local hashtags.
+                        </p>
+                    </div>
+
+                    <div class="content-group">
+                        <h2>Services Provided</h2>
+                        <ul class="detailed-list">
+                            <li><strong>🌐 Website Development</strong>: Custom business website designed according to your brand and requirements.</li>
+                            <li><strong>🎨 Website Design</strong>: Modern, premium and user-friendly interface.</li>
+                            <li><strong>📱 Responsive Development</strong>: Smooth rendering across mobile, tablet and desktop systems.</li>
+                            <li><strong>⚡ Website Optimization</strong>: Clean HTML/CSS structure and performance-focused code execution.</li>
+                            <li><strong>🔍 SEO-Friendly Structure</strong>: Configured pages, headings, content hierarchy, and meta-indexes for high search visibility.</li>
+                            <li><strong>🤖 AI-Powered Solutions</strong>: Leveraged visual AI tools to output product mockups, outline creative reels, and optimize code pipelines.</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-group">
+                        <h2>Results I Delivered</h2>
+                        <div style="margin-top: 15px; margin-bottom: 25px;">
+                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.05em;">Real Work. Real Digital Growth.</span>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 15px;">
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: var(--bg-dark-green); line-height: 1;">360°</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Digital Presence Management</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Google • Social Media • Listings • SEO</div>
+                                </div>
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: var(--bg-dark-green); line-height: 1;">3+</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Property Listing Platforms</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Justdial • MagicBricks • Housing</div>
+                                </div>
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: var(--bg-dark-green); line-height: 1;">Multiple</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Digital Marketing Assets</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Property Creatives • Posts • Reels • Content</div>
+                                </div>
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: var(--bg-dark-green); line-height: 1;">Complete</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Online Branding Management</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Google Business • Social Media • SEO • AI Content</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-group" style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 24px; padding: 32px; position: relative;">
+                        <span style="font-size: 3.5rem; color: rgba(198, 146, 20, 0.2); position: absolute; top: 10px; left: 20px; font-family: Georgia, serif; line-height: 1;">“</span>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--text-charcoal); margin-bottom: 16px; padding-left: 20px;">Client Feedback</h3>
+                        <p style="font-size: 0.98rem; line-height: 1.7; color: var(--text-muted); font-style: italic; margin-bottom: 20px;">
+                            "I had the pleasure of working with Saumya Bansal for my real estate business. She professionally handled my Google Business Profile, SEO, social media presence, business listings, content creation, and AI-based creative content.<br><br>
+                            Her work helped improve my online visibility, Google presence, and overall digital branding. She was creative, responsive, consistent, and understood how to present a real estate business professionally online.<br><br>
+                            I really appreciate her dedication and the quality of work she delivered. Highly recommended for digital marketing, SEO, Google Business Profile management, social media, and creative content."
+                        </p>
+                        <div style="border-top: 1px solid var(--border-soft); padding-top: 16px; display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <strong style="color: var(--text-charcoal); font-size: 0.95rem;">Shikha Agrawal</strong>
+                                <span style="display: block; font-size: 0.8rem; color: var(--text-muted);">Real Estate Executive</span>
+                            </div>
+                            <span style="font-size: 1.25rem; color: var(--accent-gold);">★★★★★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="meta-sidebar">
+                        <h3>Project Info</h3>
+                        <ul class="meta-list">
+                            <li>
+                                <span class="meta-label">Client</span>
+                                <span class="meta-val">RE/MAX / Shikha Agrawal</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Industry</span>
+                                <span class="meta-val">Real Estate Marketing</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Timeline</span>
+                                <span class="meta-val">Active Campaign</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="figma-footer">
+        <p>&copy; 2026 Saumya Bansal. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
