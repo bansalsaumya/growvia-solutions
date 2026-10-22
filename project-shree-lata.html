@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Lata Store Case Study | Saumya Bansal - Growvia Solutions</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-charcoal);
+            font-family: 'Poppins', sans-serif;
+        }
+        .study-container {
+            max-width: 1400px;
+            margin: 120px auto 60px;
+            padding: 0 24px;
+        }
+        .study-wrapper-card {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 32px;
+            padding: 64px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+        }
+        .study-header {
+            margin-bottom: 48px;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 32px;
+        }
+        .study-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: rgba(242, 101, 34, 0.1);
+            color: var(--accent-gold);
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .study-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-charcoal);
+            line-height: 1.15;
+        }
+        .study-intro {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-top: 12px;
+        }
+        .back-link-custom {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 700;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+        .back-link-custom:hover {
+            transform: translateX(-5px);
+        }
+        .grid-detail-sections {
+            display: grid;
+            grid-template-columns: 1.6fr 0.8fr;
+            gap: 48px;
+            align-items: start;
+        }
+        .content-group {
+            margin-bottom: 48px;
+        }
+        .content-group h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-charcoal);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .content-group h2::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 24px;
+            background-color: var(--accent-gold);
+            border-radius: 4px;
+        }
+        .content-group p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .meta-sidebar {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-soft);
+            border-radius: 24px;
+            padding: 32px;
+        }
+        .meta-sidebar h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 12px;
+        }
+        .meta-list {
+            list-style: none;
+            padding: 0;
+        }
+        .meta-list li {
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 12px;
+        }
+        .meta-label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .meta-val {
+            font-weight: 700;
+            color: var(--text-charcoal);
+            font-size: 1rem;
+        }
+        .detailed-list {
+            list-style: none;
+            padding: 0;
+        }
+        .detailed-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 16px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .detailed-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-gold);
+            font-weight: 900;
+        }
+        .glow-pill-btn {
+            background-color: var(--accent-gold);
+            border: none;
+            border-radius: 999px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        .glow-pill-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(242, 101, 34, 0.3);
+        }
+        .border-pill-btn {
+            border: 2px solid;
+            border-radius: 999px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        .border-pill-btn:hover {
+            transform: translateY(-2px);
+        }
+        @media (max-width: 992px) {
+            .grid-detail-sections {
+                grid-template-columns: 1fr;
+            }
+            .study-wrapper-card {
+                padding: 32px 24px;
+            }
+            .study-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header navigation matching current site -->
+    <header class="app-header" style="position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-soft);">
+        <div class="header-container" style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 700; text-decoration: none; color: var(--text-charcoal);">
+                <i class="fa-solid fa-heart brand-icon" style="color: var(--accent-gold);"></i>
+                <span>Growvia Solutions</span>
+            </a>
+            <nav class="nav-links" style="display: flex; gap: 24px;">
+                <a href="index.html#home" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">Home</a>
+                <a href="index.html#about" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">About us</a>
+                <a href="index.html#services" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">Services</a>
+                <a href="index.html#projects" class="nav-link active" style="text-decoration: none; color: var(--accent-gold); font-weight: 600;">Projects</a>
+                <a href="index.html#contact" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">Contact us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="study-container">
+        <a href="index.html#projects" class="back-link-custom">← Back to Projects</a>
+
+        <div class="study-wrapper-card">
+            
+            <div class="study-header">
+                <span class="study-badge">Retail & Multi-Category E-Commerce</span>
+                <h1>06 — Shree Lata Gifts & Communication</h1>
+                <p class="study-intro">Multi-Category Retail & Mobile Phone Store in Vatva, Ahmedabad — Next.js Full-Stack E-Commerce Website, SEO, Google Business Profile & Social Media Marketing</p>
+                <div style="margin-top: 24px; display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://www.shreelatastore.in/" target="_blank" class="glow-pill-btn" style="padding: 12px 24px; font-size: 0.85rem; text-decoration: none; color: white;">View Website <span>→</span></a>
+                    <a href="https://maps.app.goo.gl/gGgHMtwup21aMJQw6" target="_blank" class="glow-pill-btn" style="padding: 12px 24px; font-size: 0.85rem; text-decoration: none; color: white; background-color: var(--text-charcoal);">View Google Profile <span>→</span></a>
+                    <a href="https://www.instagram.com/shreelatastore?dlrf=MTRyNjltOXhuYXFvOQ%3D%3D" target="_blank" class="border-pill-btn" style="padding: 12px 24px; font-size: 0.85rem; text-decoration: none; color: var(--text-charcoal); border-color: var(--text-charcoal);">View Social Media <span>→</span></a>
+                </div>
+                <div style="margin-top: 32px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-soft); box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <img src="assets/shree-lata-mockup.jpg" alt="Shree Lata Gifts and Communication Digital Presence Showcase" style="width: 100%; height: auto; display: block;">
+                </div>
+            </div>
+
+            <div class="grid-detail-sections">
+                <div>
+                    <div class="content-group">
+                        <h2>The Challenge</h2>
+                        <p>
+                            Shree Lata Gifts & Communication is a multi-category retail store offering brand-new smartphones, verified second-hand devices, mobile accessories, electronic gadgets, stationery, cosmetics, and seasonal gifts. The store needed a high-performance modern digital presence to transition from a traditional brick-and-mortar shop into an omnichannel local retail powerhouse.
+                        </p>
+                        <p>
+                            The goal was to build a full-featured e-commerce catalog website using Next.js 16, establish dominant local search rankings on Google in Ahmedabad, optimize their Google Business Profile for walk-ins, and build an active Instagram shopping feed with direct WhatsApp order conversions.
+                        </p>
+                    </div>
+
+                    <div class="content-group">
+                        <h2>Services Provided</h2>
+                        <ul class="detailed-list">
+                            <li><strong>🌐 Next.js E-Commerce Catalog Website</strong>: Built a fast, modern digital store with 8+ product categories (Mobiles, Earbuds, Smart Watches, Accessories, Power Banks, Chargers, Screen Guards), category filters, flash sale countdown, and instant search.</li>
+                            <li><strong>🎨 Modern Retail UI/UX</strong>: Clean corporate e-commerce layout with category tabs, product image galleries, live announcement ticker, and responsive shopping cards.</li>
+                            <li><strong>📱 100% Mobile Responsive Design</strong>: Fluid mobile-first shopping experience built for quick smartphone browsing and instant WhatsApp ordering.</li>
+                            <li><strong>🔍 SEO & Local Search Domination</strong>: Localized schema markup, sitemap generation, structured headings, meta keywords, and Google Map pack optimization for Vatva and Ahmedabad shoppers.</li>
+                            <li><strong>📍 Google Business Profile Optimization</strong>: Complete setup and verification with store photos, operating hours (9:00 AM - 10:00 PM), customer reviews management (4.6★ with 200+ reviews), and direct call/directions routing.</li>
+                            <li><strong>📱 Social Media Branding & Creatives</strong>: Instagram brand curation (@shreelatastore), aesthetic product grid showcases, offer carousels, unboxing reels, and gadget festival promotional banners.</li>
+                            <li><strong>💬 WhatsApp Instant Enquiry Integration</strong>: Direct "Enquire on WhatsApp" action on every product, bridging online interest straight to counter sales.</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-group">
+                        <h2>What I Managed (End-to-End Execution)</h2>
+                        <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 16px; padding: 24px; text-align: center; margin-top: 15px;">
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">E-COMMERCE CATALOG WEBSITE</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">LOCAL SEO & GOOGLE MAPS RANKING</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">GOOGLE BUSINESS PROFILE & REVIEWS</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">INSTAGRAM BRANDING & REELS MARKETING</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">WHATSAPP COMMERCE & INQUIRY FUNNEL</div>
+                        </div>
+                    </div>
+
+                    <div class="content-group">
+                        <h2>Results I Delivered</h2>
+                        <div style="margin-top: 15px; margin-bottom: 25px;">
+                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.05em;">Real Retail Impact. Consistent Local Sales.</span>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 15px;">
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: #1e3a2f; line-height: 1;">360°</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Digital Transformation</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Website • Google Map • Instagram • WhatsApp Shop</div>
+                                </div>
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: #1e3a2f; line-height: 1;">4.6 ★</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Google Store Rating</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">210+ Verified Customer Reviews in Vatva</div>
+                                </div>
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: #1e3a2f; line-height: 1;">12.8K+</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Instagram Followers</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">High-engagement social community for gadget deals</div>
+                                </div>
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: #1e3a2f; line-height: 1;">8+</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Catalog Categories Live</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Mobile phones, audio, smart watches, accessories</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-group" style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 24px; padding: 32px; position: relative;">
+                        <span style="font-size: 3.5rem; color: rgba(198, 146, 20, 0.2); position: absolute; top: 10px; left: 20px; font-family: Georgia, serif; line-height: 1;">“</span>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--text-charcoal); margin-bottom: 16px; padding-left: 20px;">Client Feedback</h3>
+                        <p style="font-size: 0.98rem; line-height: 1.7; color: var(--text-muted); font-style: italic; margin-bottom: 20px;">
+                            "Saumya has transformed the way customers discover Shree Lata Store. Her execution on our Next.js e-commerce website, SEO, and Google Business Profile has brought hundreds of local shoppers to our store in Vatva. She manages our Instagram posts and stories with brilliant product creatives and reels, and the direct WhatsApp order system has boosted our daily sales significantly. A true digital marketing expert!"
+                        </p>
+                        <div style="border-top: 1px solid var(--border-soft); padding-top: 16px; display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <strong style="color: var(--text-charcoal); font-size: 0.95rem;">Shree Lata Store Management</strong>
+                                <span style="display: block; font-size: 0.8rem; color: var(--text-muted);">Shree Lata Gifts & Communication, Vatva, Ahmedabad</span>
+                            </div>
+                            <span style="font-size: 1.25rem; color: var(--accent-gold);">★★★★★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="meta-info">
+                    <div class="meta-sidebar">
+                        <h3>Project Info</h3>
+                        <ul class="meta-list">
+                            <li>
+                                <span class="meta-label">Client</span>
+                                <span class="meta-val">Shree Lata Gifts & Communication</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Location</span>
+                                <span class="meta-val">121, Gayatri Shopping Center, Near Bachubhai Kuvo, Vinzol Road, Vatva, Ahmedabad, Gujarat 382440</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Industry</span>
+                                <span class="meta-val">Retail, Mobiles & Multi-Category Store</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Services</span>
+                                <span class="meta-val">Full-Stack Next.js E-Commerce, Local SEO, Google Business Profile & Social Media</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Website</span>
+                                <span class="meta-val"><a href="https://www.shreelatastore.in/" target="_blank" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;">shreelatastore.in</a></span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Google Profile</span>
+                                <span class="meta-val"><a href="https://maps.app.goo.gl/gGgHMtwup21aMJQw6" target="_blank" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;">Google Maps & Reviews (4.6★)</a></span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Social Media</span>
+                                <span class="meta-val"><a href="https://www.instagram.com/shreelatastore?dlrf=MTRyNjltOXhuYXFvOQ%3D%3D" target="_blank" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;">@shreelatastore</a></span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Timeline</span>
+                                <span class="meta-val">Complete Digital Transformation</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Listings & Channels</span>
+                                <span class="meta-val">Google Business Profile • Instagram • WhatsApp Shop</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="figma-footer" style="text-align: center; padding: 30px; border-top: 1px solid var(--border-soft); margin-top: 60px;">
+        <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 Growvia Solutions. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
