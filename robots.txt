@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://growvia-solutions.vercel.app/sitemap.xml
