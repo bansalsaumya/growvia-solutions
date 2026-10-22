@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedik Realty Case Study | Saumya Bansal - Growvia Solutions</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-charcoal);
+            font-family: 'Poppins', sans-serif;
+        }
+        .study-container {
+            max-width: 1400px;
+            margin: 120px auto 60px;
+            padding: 0 24px;
+        }
+        .study-wrapper-card {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 32px;
+            padding: 64px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+        }
+        .study-header {
+            margin-bottom: 48px;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 32px;
+        }
+        .study-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: rgba(242, 101, 34, 0.1);
+            color: var(--accent-gold);
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .study-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-charcoal);
+            line-height: 1.15;
+        }
+        .study-intro {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-top: 12px;
+        }
+        .back-link-custom {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 700;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+        .back-link-custom:hover {
+            transform: translateX(-5px);
+        }
+        .grid-detail-sections {
+            display: grid;
+            grid-template-columns: 1.6fr 0.8fr;
+            gap: 48px;
+            align-items: start;
+        }
+        .content-group {
+            margin-bottom: 48px;
+        }
+        .content-group h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-charcoal);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .content-group h2::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 24px;
+            background-color: var(--accent-gold);
+            border-radius: 4px;
+        }
+        .content-group p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .meta-sidebar {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-soft);
+            border-radius: 24px;
+            padding: 32px;
+        }
+        .meta-sidebar h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 12px;
+        }
+        .meta-list {
+            list-style: none;
+            padding: 0;
+        }
+        .meta-list li {
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 12px;
+        }
+        .meta-label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .meta-val {
+            font-weight: 700;
+            color: var(--text-charcoal);
+            font-size: 1rem;
+        }
+        .detailed-list {
+            list-style: none;
+            padding: 0;
+        }
+        .detailed-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 16px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .detailed-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-gold);
+            font-weight: 900;
+        }
+        .glow-pill-btn {
+            background-color: var(--accent-gold);
+            border: none;
+            border-radius: 999px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        .glow-pill-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(242, 101, 34, 0.3);
+        }
+        .border-pill-btn {
+            border: 2px solid;
+            border-radius: 999px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        .border-pill-btn:hover {
+            transform: translateY(-2px);
+        }
+        @media (max-width: 992px) {
+            .grid-detail-sections {
+                grid-template-columns: 1fr;
+            }
+            .study-wrapper-card {
+                padding: 32px 24px;
+            }
+            .study-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header navigation matching current site -->
+    <header class="app-header" style="position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-soft);">
+        <div class="header-container" style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 700; text-decoration: none; color: var(--text-charcoal);">
+                <i class="fa-solid fa-heart brand-icon" style="color: var(--accent-gold);"></i>
+                <span>Growvia Solutions</span>
+            </a>
+            <nav class="nav-links" style="display: flex; gap: 24px;">
+                <a href="index.html#home" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">Home</a>
+                <a href="index.html#about" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">About us</a>
+                <a href="index.html#services" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">Services</a>
+                <a href="index.html#projects" class="nav-link active" style="text-decoration: none; color: var(--accent-gold); font-weight: 600;">Projects</a>
+                <a href="index.html#contact" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">Contact us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="study-container">
+        <a href="index.html#projects" class="back-link-custom">← Back to Projects</a>
+
+        <div class="study-wrapper-card">
+            
+            <div class="study-header">
+                <span class="study-badge">Real Estate & Property Consultancy</span>
+                <h1>05 — Vedik Realty</h1>
+                <p class="study-intro">Real Estate & Property Consultancy in Dharuhera, Haryana — Full-Stack Web Development, SEO, Google Business Profile & Social Media Marketing</p>
+                <div style="margin-top: 24px; display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://www.vedikrealty.com" target="_blank" class="glow-pill-btn" style="padding: 12px 24px; font-size: 0.85rem; text-decoration: none; color: white;">View Website <span>→</span></a>
+                    <a href="#meta-info" class="glow-pill-btn" style="padding: 12px 24px; font-size: 0.85rem; text-decoration: none; color: white; background-color: var(--text-charcoal);">Google Business Profile <span>→</span></a>
+                    <a href="https://instagram.com/vedikrealty" target="_blank" class="border-pill-btn" style="padding: 12px 24px; font-size: 0.85rem; text-decoration: none; color: var(--text-charcoal); border-color: var(--text-charcoal);">View Social Media <span>→</span></a>
+                </div>
+                <div style="margin-top: 32px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-soft); box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <img src="assets/vedik-realty-mockup.jpg" alt="Vedik Realty Complete Digital Presence Showcase" style="width: 100%; height: auto; display: block;">
+                </div>
+            </div>
+
+            <div class="grid-detail-sections">
+                <div>
+                    <div class="content-group">
+                        <h2>The Challenge</h2>
+                        <p>
+                            Vedik Realty required a premium, end-to-end digital footprint for the real estate landscape in Dharuhera and NCR. Potential property buyers and investors needed an intuitive platform to browse residential plots, luxury villas, commercial spaces, and high-yield investment options with instant inquiry and location navigation.
+                        </p>
+                        <p>
+                            The objective was to combine a modern full-stack web application with dominant local SEO rankings on Google, verified Google Business Profile mapping, social media brand visibility on Instagram, and multi-channel lead funnels.
+                        </p>
+                    </div>
+
+                    <div class="content-group">
+                        <h2>Services Provided</h2>
+                        <ul class="detailed-list">
+                            <li><strong>🌐 Full-Stack Website Development</strong>: Developed a modern, high-converting property portal with dynamic property listings, search filters, location-wise categorization, and direct lead enquiry modals.</li>
+                            <li><strong>🎨 Premium UI/UX Design</strong>: High-end luxury architectural theme with smooth animations, intuitive navigation, responsive cards, and clean typography.</li>
+                            <li><strong>📱 100% Mobile & Desktop Responsive</strong>: Flawless experience optimized across smartphones, tablets, laptops, and wide screens.</li>
+                            <li><strong>🔍 SEO & Local Search Domination</strong>: On-page SEO, localized keywords for Dharuhera & Rewari real estate, Schema markup, XML sitemaps, meta descriptions, and fast page load times.</li>
+                            <li><strong>📍 Google Business Profile (GBP)</strong>: Complete optimization with photos, verified address (Sector 19, Dharuhera), categories, reviews management, and call-to-action routing.</li>
+                            <li><strong>📱 Social Media Branding & Creatives</strong>: Instagram brand profile setup (@vedikrealty), bespoke property showcase carousel posts, reels editing, and promotional banners.</li>
+                            <li><strong>🎯 Lead Generation Architecture</strong>: Integrated WhatsApp click-to-chat, phone call buttons, and automated lead capture form connected to the backend.</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-group">
+                        <h2>What I Managed (End-to-End Execution)</h2>
+                        <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 16px; padding: 24px; text-align: center; margin-top: 15px;">
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">WEBSITE & PORTAL DEVELOPMENT</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">SEO & LOCAL SEARCH OPTIMIZATION</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">GOOGLE BUSINESS PROFILE & MAP RANKING</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">SOCIAL MEDIA MARKETING & INSTAGRAM REELS</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">PROPERTY LISTINGS ON 99ACRES & HOUSING</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">DIRECT LEAD CAPTURE & WHATSAPP FUNNELS</div>
+                        </div>
+                    </div>
+
+                    <div class="content-group">
+                        <h2>Results I Delivered</h2>
+                        <div style="margin-top: 15px; margin-bottom: 25px;">
+                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.05em;">Real Impact. Measurable Growth.</span>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 15px;">
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: #1e3a2f; line-height: 1;">360°</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Digital Footprint</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Website • Google Map • Instagram • Listings • Leads</div>
+                                </div>
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: #1e3a2f; line-height: 1;">4.8 ★</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Google Map Rating</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">50+ Client Reviews & Active Location Mapping</div>
+                                </div>
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: #1e3a2f; line-height: 1;">2.4K+</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Social Audience Built</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Engaged buyers on Instagram & local networks</div>
+                                </div>
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: #1e3a2f; line-height: 1;">2 Months</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Ongoing Freelance Management</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Consistent growth, leads & fresh property updates</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-group" style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 24px; padding: 32px; position: relative;">
+                        <span style="font-size: 3.5rem; color: rgba(198, 146, 20, 0.2); position: absolute; top: 10px; left: 20px; font-family: Georgia, serif; line-height: 1;">“</span>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--text-charcoal); margin-bottom: 16px; padding-left: 20px;">Client Feedback</h3>
+                        <p style="font-size: 0.98rem; line-height: 1.7; color: var(--text-muted); font-style: italic; margin-bottom: 20px;">
+                            "Saumya has been managing our digital marketing and web development for Vedik Realty over the last 2 months with absolute excellence. She built a remarkable property portal, established our Google Business Profile with top local rankings in Dharuhera, and manages our Instagram brand with top-quality creatives and reels. We get consistent enquiries for residential and commercial plots directly through the channels she set up. Highly recommended!"
+                        </p>
+                        <div style="border-top: 1px solid var(--border-soft); padding-top: 16px; display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <strong style="color: var(--text-charcoal); font-size: 0.95rem;">Vedik Realty Management</strong>
+                                <span style="display: block; font-size: 0.8rem; color: var(--text-muted);">Real Estate & Property Consultancy, Dharuhera</span>
+                            </div>
+                            <span style="font-size: 1.25rem; color: var(--accent-gold);">★★★★★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="meta-info">
+                    <div class="meta-sidebar">
+                        <h3>Project Info</h3>
+                        <ul class="meta-list">
+                            <li>
+                                <span class="meta-label">Client</span>
+                                <span class="meta-val">Vedik Realty</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Location</span>
+                                <span class="meta-val">Sector 19, Dharuhera, Haryana</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Industry</span>
+                                <span class="meta-val">Real Estate & Property Consultancy</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Services</span>
+                                <span class="meta-val">Web Development, SEO, Google Business & Social Media</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Website</span>
+                                <span class="meta-val">www.vedikrealty.com</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Timeline</span>
+                                <span class="meta-val">2 Months (Ongoing Freelance)</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Listings & Channels</span>
+                                <span class="meta-val">Google Business Profile • Instagram • 99acres • Housing • WhatsApp</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="figma-footer" style="text-align: center; padding: 30px; border-top: 1px solid var(--border-soft); margin-top: 60px;">
+        <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 Growvia Solutions. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
