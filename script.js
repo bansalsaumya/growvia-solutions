@@ -263,11 +263,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('success-modal').classList.add('show');
                 form.reset();
             } else {
-                alert('Error: ' + data.error);
+                const waText = `Hi Saumya! My name is ${name} (${email}).\n\nProject Details: ${message}`;
+                window.open(`https://wa.me/917435967985?text=${encodeURIComponent(waText)}`, '_blank');
+                document.getElementById('success-modal').classList.add('show');
+                form.reset();
             }
         } catch (error) {
             console.error('Submission error:', error);
-            alert('An error occurred while sending the message. Please try again later.');
+            const waText = `Hi Saumya! My name is ${name} (${email}).\n\nProject Details: ${message}`;
+            window.open(`https://wa.me/917435967985?text=${encodeURIComponent(waText)}`, '_blank');
+            document.getElementById('success-modal').classList.add('show');
+            form.reset();
         } finally {
             btn.textContent = originalText;
             btn.disabled = false;

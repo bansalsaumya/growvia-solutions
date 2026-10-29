@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Project Case Study | Saumya Bansal</title>
+    <title>Real Estate Project Case Study | Saumya Bansal - Growvia Solutions</title>
+    <meta name="description" content="Real Estate Marketing Case Study by Saumya Bansal (Growvia Solutions) — Instagram Branding, Property Listing Portals, Local SEO & 500+ Buyer Leads Generated.">
+    <link rel="icon" type="image/svg+xml" href="growvia-logo-purple-orange.svg">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -140,14 +142,72 @@
             font-size: 1rem;
         }
         .detailed-list {
-            padding-left: 20px;
+            list-style: none;
+            padding: 0;
             margin-top: 16px;
         }
         .detailed-list li {
-            margin-bottom: 14px;
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 16px;
             color: var(--text-muted);
             font-size: 1.05rem;
             line-height: 1.6;
+        }
+        .detailed-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-gold);
+            font-weight: 900;
+        }
+        .glow-pill-btn {
+            background-color: var(--accent-gold);
+            border: none;
+            border-radius: 999px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        .glow-pill-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(242, 101, 34, 0.3);
+        }
+        .border-pill-btn {
+            border: 2px solid;
+            border-radius: 999px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        .border-pill-btn:hover {
+            transform: translateY(-2px);
+        }
+        @media (max-width: 992px) {
+            .grid-detail-sections {
+                grid-template-columns: 1fr;
+            }
+            .study-wrapper-card {
+                padding: 32px 24px;
+            }
+            .study-header h1 {
+                font-size: 2.2rem;
+            }
+            .header-container {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .nav-links {
+                gap: 14px !important;
+                font-size: 0.85rem;
+                flex-wrap: wrap;
+            }
         }
     </style>
 </head>
@@ -171,7 +231,7 @@
     </header>
 
     <main class="study-container">
-        <a href="projects.html" class="back-link-custom">← Back to Projects</a>
+        <a href="index.html#projects" class="back-link-custom">← Back to Projects</a>
 
         <div class="study-wrapper-card">
             
@@ -277,8 +337,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="figma-footer">
-        <p>&copy; 2026 Saumya Bansal. All rights reserved.</p>
+    <footer class="figma-footer" style="text-align: center; padding: 30px; border-top: 1px solid var(--border-soft); margin-top: 60px;">
+        <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 Growvia Solutions. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
