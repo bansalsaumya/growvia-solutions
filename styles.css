@@ -210,11 +210,41 @@ p {
 }
 
 .logo {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 8px;
-    font-size: 1.5rem;
+    gap: 10px;
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.logo-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f95f2a 0%, #ff8533 100%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(242, 101, 34, 0.32);
+    flex-shrink: 0;
+}
+
+.logo-text {
+    color: #1a1a1a;
+    font-weight: 800;
+}
+
+.logo-accent {
+    color: var(--primary-color);
     font-weight: 700;
+}
+
+.logo-dot {
+    color: var(--primary-color);
+    font-weight: 900;
 }
 
 .brand-icon {
