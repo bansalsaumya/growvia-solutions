@@ -3,13 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
 
+    function closeMobileMenu() {
+        if (!navLinks) return;
+        navLinks.removeAttribute('style');
+        navLinks.dataset.mobileOpen = 'false';
+    }
+
     if (mobileMenuBtn && navLinks) {
         mobileMenuBtn.addEventListener('click', () => {
-            // For a real app, you'd toggle a class to show/hide the menu
-            // Here we just do a simple toggle for demonstration
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.display = 'none';
+            if (navLinks.dataset.mobileOpen === 'true') {
+                closeMobileMenu();
             } else {
+                navLinks.dataset.mobileOpen = 'true';
                 navLinks.style.display = 'flex';
                 navLinks.style.flexDirection = 'column';
                 navLinks.style.position = 'absolute';
@@ -19,16 +24,69 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.style.background = '#fff';
                 navLinks.style.padding = '20px';
                 navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+                navLinks.style.zIndex = '999';
             }
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 992) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 992 && navLinks.dataset.mobileOpen === 'true') {
+                closeMobileMenu();
+            }
+        });
+    }
+
+    // Featured Projects Slider Prev/Next Buttons
+    const projectsSlider = document.getElementById('projects-slider') || document.querySelector('.projects-slider-wrapper');
+    const projPrevBtn = document.getElementById('proj-prev-btn');
+    const projNextBtn = document.getElementById('proj-next-btn');
+
+    if (projectsSlider && projPrevBtn && projNextBtn) {
+        projPrevBtn.addEventListener('click', () => {
+            projectsSlider.scrollBy({ left: -520, behavior: 'smooth' });
+        });
+        projNextBtn.addEventListener('click', () => {
+            projectsSlider.scrollBy({ left: 520, behavior: 'smooth' });
+        });
+    }
+
+    // Social Media & Creative Gallery Category Filters
+    const filterBtns = document.querySelectorAll('.gallery-filters .filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-grid .gallery-item');
+
+    if (filterBtns.length > 0 && galleryItems.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter') || 'all';
+                galleryItems.forEach(item => {
+                    const cat = item.getAttribute('data-category');
+                    if (filter === 'all' || cat === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
         });
     }
 
     // Smooth Scrolling for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            if (!href || href === '#') return;
+            const target = document.querySelector(href);
             if (target) {
+                e.preventDefault();
                 target.scrollIntoView({
                     behavior: 'smooth'
                 });

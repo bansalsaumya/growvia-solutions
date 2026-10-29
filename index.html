@@ -9,6 +9,7 @@
     <meta name="author" content="Saumya Bansal">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://growvia-solutions.vercel.app/">
+    <link rel="icon" type="image/svg+xml" href="growvia-logo-purple-orange.svg">
 
     <!-- Open Graph / Facebook / WhatsApp Preview -->
     <meta property="og:type" content="website">
@@ -345,11 +346,15 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <div class="section-header text-center">
+            <div class="section-header text-center" style="position: relative;">
                 <h2>Featured <span class="highlight">Projects</span></h2>
-                <p>Take a look at some of our successful digital marketing campaigns.</p>
+                <p>Take a look at our real-world client transformations &amp; 3D web showcases.</p>
+                <div style="display: flex; justify-content: center; gap: 12px; margin-top: 16px;">
+                    <button type="button" class="slider-btn" id="proj-prev-btn" aria-label="Previous Project"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button type="button" class="slider-btn" id="proj-next-btn" aria-label="Next Project"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
             </div>
-            <div class="projects-slider-wrapper">
+            <div class="projects-slider-wrapper" id="projects-slider">
                 <!-- Project 01 -->
                 <a href="project-roe.html" target="_blank" class="project-slide-card" style="background-image: url('https://saumya-digital-marketing-portfolio.vercel.app/aarohi-mockup.png.png');">
                     <div class="project-slide-overlay">
@@ -530,6 +535,28 @@
                             <span>Marketing Director</span>
                         </div>
                     </div>
+                    <!-- Review Card 4 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"Saumya has transformed the way customers discover Shree Lata Store. Her execution on our Next.js e-commerce website, SEO, and Google Business Profile has brought hundreds of local shoppers in Vatva!"</p>
+                        <div class="review-author">
+                            <strong>Shree Lata Store</strong>
+                            <span>Management, Vatva Ahmedabad</span>
+                        </div>
+                    </div>
+                    <!-- Review Card 5 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"From building our full property portal to ranking our Google Business Profile in Dharuhera and curating our Instagram brand — Saumya delivered a 360° digital presence that generates real property leads!"</p>
+                        <div class="review-author">
+                            <strong>Vedik Realty</strong>
+                            <span>Founder, Dharuhera Haryana</span>
+                        </div>
+                    </div>
                     <!-- Duplicates for infinite scrolling -->
                     <div class="review-card">
                         <div class="review-stars">
@@ -561,6 +588,26 @@
                             <span>Marketing Director</span>
                         </div>
                     </div>
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"Saumya has transformed the way customers discover Shree Lata Store. Her execution on our Next.js e-commerce website, SEO, and Google Business Profile has brought hundreds of local shoppers in Vatva!"</p>
+                        <div class="review-author">
+                            <strong>Shree Lata Store</strong>
+                            <span>Management, Vatva Ahmedabad</span>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"From building our full property portal to ranking our Google Business Profile in Dharuhera and curating our Instagram brand — Saumya delivered a 360° digital presence that generates real property leads!"</p>
+                        <div class="review-author">
+                            <strong>Vedik Realty</strong>
+                            <span>Founder, Dharuhera Haryana</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -572,29 +619,53 @@
         <section class="custom-section">
             <div class="section-header-custom">
                 <span class="figma-sub">— Creative Works</span>
-                <h2>Social Media & Creative Gallery</h2>
+                <h2>Social Media &amp; Creative Gallery</h2>
             </div>
             <div class="gallery-filters">
-                <button class="filter-btn active">All</button>
-                <button class="filter-btn">Manufacturing</button>
-                <button class="filter-btn">Real Estate</button>
-                <button class="filter-btn">PG</button>
-                <button class="filter-btn">Branding</button>
-                <button class="filter-btn">Product Marketing</button>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="manufacturing">Manufacturing</button>
+                <button class="filter-btn" data-filter="realestate">Real Estate</button>
+                <button class="filter-btn" data-filter="pg">PG &amp; Hospitality</button>
+                <button class="filter-btn" data-filter="branding">3D &amp; Branding</button>
+                <button class="filter-btn" data-filter="product">Retail &amp; E-Commerce</button>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-item" onclick="alert('Project: Aarohi Enterprise\nObjective: B2B Fabric lamination visuals\nWhat I Created: Creative reels and grid templates');">
-                    <h4>B2B Fabric Lamination Reels</h4>
-                    <p style="font-size:0.8rem; color:var(--text-muted); margin-top:8px;">Click to view info</p>
-                </div>
-                <div class="gallery-item" onclick="alert('Project: Siddhivinayak PG\nObjective: Local hospitality representation\nWhat I Created: Facilities grid and map citations layout');">
-                    <h4>Hospitality Visual Layouts</h4>
-                    <p style="font-size:0.8rem; color:var(--text-muted); margin-top:8px;">Click to view info</p>
-                </div>
-                <div class="gallery-item" onclick="alert('Project: Real Estate Project\nObjective: Luxury commercial property leads\nWhat I Created: Property layout templates and captions');">
-                    <h4>Commercial Property Posts</h4>
-                    <p style="font-size:0.8rem; color:var(--text-muted); margin-top:8px;">Click to view info</p>
-                </div>
+                <a href="project-roe.html" target="_blank" class="gallery-item" data-category="manufacturing" style="text-decoration: none; color: inherit; display: block;">
+                    <span style="font-size: 0.72rem; font-weight: 700; color: #f95f2a; text-transform: uppercase;">Manufacturing • B2B</span>
+                    <h4 style="margin-top: 6px;">Aarohi Enterprise — B2B Reels &amp; SEO</h4>
+                    <p style="font-size:0.84rem; color:var(--text-muted); margin-top:8px; line-height: 1.5;">Fabric lamination showcase reels, product grid templates &amp; #1 Google ranking in Ahmedabad.</p>
+                    <span style="display: inline-block; margin-top: 12px; font-size: 0.8rem; font-weight: 700; color: #f95f2a;">View Case Study →</span>
+                </a>
+                <a href="project-vedik.html" target="_blank" class="gallery-item" data-category="realestate" style="text-decoration: none; color: inherit; display: block;">
+                    <span style="font-size: 0.72rem; font-weight: 700; color: #f95f2a; text-transform: uppercase;">Real Estate • Property Portal</span>
+                    <h4 style="margin-top: 6px;">Vedik Realty — Instagram &amp; Local SEO</h4>
+                    <p style="font-size:0.84rem; color:var(--text-muted); margin-top:8px; line-height: 1.5;">360° real estate branding, property portal, GBP ranking &amp; lead generation funnel in Dharuhera.</p>
+                    <span style="display: inline-block; margin-top: 12px; font-size: 0.8rem; font-weight: 700; color: #f95f2a;">View Case Study →</span>
+                </a>
+                <a href="project-shree-lata.html" target="_blank" class="gallery-item" data-category="product" style="text-decoration: none; color: inherit; display: block;">
+                    <span style="font-size: 0.72rem; font-weight: 700; color: #f95f2a; text-transform: uppercase;">Retail &amp; E-Commerce • 12.8K+ Community</span>
+                    <h4 style="margin-top: 6px;">Shree Lata Store — Gadgets &amp; Reels</h4>
+                    <p style="font-size:0.84rem; color:var(--text-muted); margin-top:8px; line-height: 1.5;">Next.js multi-category store, unboxing reels, festival promos &amp; 4.6★ Google Map dominance.</p>
+                    <span style="display: inline-block; margin-top: 12px; font-size: 0.8rem; font-weight: 700; color: #f95f2a;">View Case Study →</span>
+                </a>
+                <a href="project-haryana-pg.html" target="_blank" class="gallery-item" data-category="pg" style="text-decoration: none; color: inherit; display: block;">
+                    <span style="font-size: 0.72rem; font-weight: 700; color: #f95f2a; text-transform: uppercase;">PG &amp; Hospitality</span>
+                    <h4 style="margin-top: 6px;">Siddhivinayak PG — Local Map &amp; Visuals</h4>
+                    <p style="font-size:0.84rem; color:var(--text-muted); margin-top:8px; line-height: 1.5;">Hospitality facility grid layouts, verified Google Business citations &amp; +150% local tenant inquiries.</p>
+                    <span style="display: inline-block; margin-top: 12px; font-size: 0.8rem; font-weight: 700; color: #f95f2a;">View Case Study →</span>
+                </a>
+                <a href="project-realestate.html" target="_blank" class="gallery-item" data-category="realestate" style="text-decoration: none; color: inherit; display: block;">
+                    <span style="font-size: 0.72rem; font-weight: 700; color: #f95f2a; text-transform: uppercase;">Real Estate • Social Campaigns</span>
+                    <h4 style="margin-top: 6px;">Commercial Property Creatives</h4>
+                    <p style="font-size:0.84rem; color:var(--text-muted); margin-top:8px; line-height: 1.5;">Luxury property layout templates, high-converting ad copies &amp; 500+ buyer leads generated.</p>
+                    <span style="display: inline-block; margin-top: 12px; font-size: 0.8rem; font-weight: 700; color: #f95f2a;">View Case Study →</span>
+                </a>
+                <a href="project-fizze.html" target="_blank" class="gallery-item" data-category="branding" style="text-decoration: none; color: inherit; display: block;">
+                    <span style="font-size: 0.72rem; font-weight: 700; color: #f95f2a; text-transform: uppercase;">3D WebGL • D2C Brand Concept</span>
+                    <h4 style="margin-top: 6px;">FIZZÉ — 3D Sparkling Beverage Experience</h4>
+                    <p style="font-size:0.84rem; color:var(--text-muted); margin-top:8px; line-height: 1.5;">Interactive Three.js 3D cans, GSAP scroll-driven pour animation, live can personalizer &amp; shoppable reels.</p>
+                    <span style="display: inline-block; margin-top: 12px; font-size: 0.8rem; font-weight: 700; color: #f95f2a;">Explore 3D Showcase →</span>
+                </a>
             </div>
         </section>
 
