@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIZZÉ 3D Beverage Showcase | Saumya Bansal - Growvia Solutions</title>
+    <meta name="description" content="Explore FIZZÉ — an interactive 3D WebGL scrollytelling and D2C sparkling beverage concept website engineered by Saumya Bansal (Growvia Solutions) using Three.js, GSAP ScrollTrigger, Lenis, and Technical SEO.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-charcoal);
+            font-family: 'Poppins', sans-serif;
+        }
+        .study-container {
+            max-width: 1400px;
+            margin: 120px auto 60px;
+            padding: 0 24px;
+        }
+        .study-wrapper-card {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 32px;
+            padding: 64px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+        }
+        .study-header {
+            margin-bottom: 48px;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 32px;
+        }
+        .study-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: rgba(242, 101, 34, 0.1);
+            color: var(--accent-gold);
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .study-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-charcoal);
+            line-height: 1.15;
+        }
+        .study-intro {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-top: 12px;
+        }
+        .back-link-custom {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 700;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+        .back-link-custom:hover {
+            transform: translateX(-5px);
+        }
+        .grid-detail-sections {
+            display: grid;
+            grid-template-columns: 1.6fr 0.8fr;
+            gap: 48px;
+            align-items: start;
+        }
+        .content-group {
+            margin-bottom: 48px;
+        }
+        .content-group h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-charcoal);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .content-group h2::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 24px;
+            background-color: var(--accent-gold);
+            border-radius: 4px;
+        }
+        .content-group p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .meta-sidebar {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-soft);
+            border-radius: 24px;
+            padding: 32px;
+        }
+        .meta-sidebar h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 12px;
+        }
+        .meta-list {
+            list-style: none;
+            padding: 0;
+        }
+        .meta-list li {
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 12px;
+        }
+        .meta-label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .meta-val {
+            font-weight: 700;
+            color: var(--text-charcoal);
+            font-size: 1rem;
+        }
+        .detailed-list {
+            list-style: none;
+            padding: 0;
+        }
+        .detailed-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 16px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .detailed-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-gold);
+            font-weight: 900;
+        }
+        .glow-pill-btn {
+            background-color: var(--accent-gold);
+            border: none;
+            border-radius: 999px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        .glow-pill-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(242, 101, 34, 0.3);
+        }
+        .border-pill-btn {
+            border: 2px solid;
+            border-radius: 999px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        .border-pill-btn:hover {
+            transform: translateY(-2px);
+        }
+        @media (max-width: 992px) {
+            .grid-detail-sections {
+                grid-template-columns: 1fr;
+            }
+            .study-wrapper-card {
+                padding: 32px 24px;
+            }
+            .study-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header navigation matching current site -->
+    <header class="app-header" style="position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-soft);">
+        <div class="header-container" style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 700; text-decoration: none; color: var(--text-charcoal);">
+                <i class="fa-solid fa-heart brand-icon" style="color: var(--accent-gold);"></i>
+                <span>Growvia Solutions</span>
+            </a>
+            <nav class="nav-links" style="display: flex; gap: 24px;">
+                <a href="index.html#home" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">Home</a>
+                <a href="index.html#about" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">About us</a>
+                <a href="index.html#services" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">Services</a>
+                <a href="index.html#projects" class="nav-link active" style="text-decoration: none; color: var(--accent-gold); font-weight: 600;">Projects</a>
+                <a href="index.html#contact" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">Contact us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="study-container">
+        <a href="index.html#projects" class="back-link-custom">← Back to Projects</a>
+
+        <div class="study-wrapper-card">
+            
+            <div class="study-header">
+                <span class="study-badge">In-House 3D Concept &amp; Flagship D2C Showcase</span>
+                <h1>07 — FIZZÉ — Interactive 3D Sparkling Beverage Experience</h1>
+                <p class="study-intro">Growvia Creative Lab Showcase — Procedural Three.js 3D Cans, GSAP Scroll-Driven Pour Physics, Live 3D Name Personalizer, Shoppable Video Reels &amp; Technical SEO</p>
+                <div style="margin-top: 24px; display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://fizze.vercel.app/" target="_blank" class="glow-pill-btn" style="padding: 12px 24px; font-size: 0.85rem; text-decoration: none; color: white;">Launch Live 3D Website <span>→</span></a>
+                    <a href="https://github.com/bansalsaumya/fizze" target="_blank" class="glow-pill-btn" style="padding: 12px 24px; font-size: 0.85rem; text-decoration: none; color: white; background-color: var(--text-charcoal);">View GitHub Repository <span>→</span></a>
+                    <a href="https://wa.me/917435967985?text=Hi%20Saumya!%20I%20saw%20your%20FIZZ%C3%89%203D%20Concept%20Website%20and%20want%20to%20discuss%20a%20similar%20project." target="_blank" class="border-pill-btn" style="padding: 12px 24px; font-size: 0.85rem; text-decoration: none; color: var(--text-charcoal); border-color: var(--text-charcoal);">Build a Similar 3D Site <span>→</span></a>
+                </div>
+                <div style="margin-top: 32px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-soft); box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                    <img src="assets/fizze-mockup.svg" alt="FIZZÉ Interactive 3D Beverage Website Showcase by Growvia Solutions" style="width: 100%; height: auto; display: block;">
+                </div>
+            </div>
+
+            <div class="grid-detail-sections">
+                <div>
+                    <div class="content-group">
+                        <h2>The Concept &amp; Vision</h2>
+                        <p>
+                            <strong>FIZZÉ</strong> is an in-house flagship concept project engineered at <strong>Growvia Solutions</strong> to demonstrate what next-generation D2C e-commerce looks like when high-impact <strong>3D WebGL scrollytelling</strong> meets high-conversion direct-to-consumer shopping.
+                        </p>
+                        <p>
+                            Inspired by global beverage experiences and modern craft mixer brands, the goal was to build a lightning-fast, zero-external-model 3D web experience where every metallic soda can, condensation droplet, ice cube, and fizzy liquid pour is generated procedurally in real time using <strong>Three.js</strong> and <strong>GSAP ScrollTrigger</strong> — paired with full e-commerce features and 100/100 technical SEO.
+                        </p>
+                    </div>
+
+                    <div class="content-group">
+                        <h2>Key Features Engineered</h2>
+                        <ul class="detailed-list">
+                            <li><strong>🧊 Procedural 3D Soda Cans (Three.js + HTML5 Canvas)</strong>: Custom-lathed metallic cans featuring high-DPI wrap-around labels, nutrition facts, barcodes, double-ring pull-tabs, and 100+ glistening condensation droplets without heavy external `.glb` downloads.</li>
+                            <li><strong>🥤 Scroll-Driven 3D Pour Ritual (GSAP ScrollTrigger)</strong>: Pinned interactive storytelling section where scrolling cracks open the pull-tab, tilts the can, and pours sparkling cola into a refractive glass with bobbing ice cubes, rising foam, and 160+ carbonation bubbles.</li>
+                            <li><strong>🎨 Live 4-Flavour 3D Morphing Switcher</strong>: Instant switcher in the hero section that morphs the 3D can texture, studio rim lighting, and entire site accent theme across <em>Classic Cola</em>, <em>Lemon Zest</em>, <em>Orange Pop</em>, and <em>Berry Blast</em>.</li>
+                            <li><strong>✨ "Your Name on the Can" 3D Personalizer</strong>: Interactive customizer allowing users to type any name and see it rendered live in 3D (e.g., <code>★ MADE FOR SAUMYA ★</code>) on the rotating metallic can before adding their custom pack to the cart.</li>
+                            <li><strong>🔄 Interactive 360° 3D Product Cards</strong>: Every product card in the store features a live auto-spinning, drag-to-rotate 3D can powered by a single shared offscreen WebGL renderer for butter-smooth 60 FPS performance.</li>
+                            <li><strong>🎬 Shoppable Mixology Video Reels &amp; Recipe Builder</strong>: Vertical video reel cards with fullscreen modal playback, step-by-step mocktail recipes, and 1-click "Add Ingredients to Cart".</li>
+                            <li><strong>🔊 Synthesized Web Audio ASMR Engine</strong>: Zero-asset procedural sound synthesis generating metallic pull-tab crack, pressurized fizz hiss, liquid pour, and bubble pops using the browser's Web Audio API.</li>
+                            <li><strong>🔍 Technical SEO &amp; WhatsApp Commerce</strong>: Complete Open Graph social cards, JSON-LD `Product`, `Brand`, and `FAQPage` schemas, XML sitemap, and a persistent slide-out cart drawer with direct WhatsApp order checkout.</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-group">
+                        <h2>Architecture &amp; Execution Flow</h2>
+                        <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 16px; padding: 24px; text-align: center; margin-top: 15px;">
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">PROCEDURAL THREE.JS 3D CAN &amp; GLASS GEOMETRY</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">GSAP SCROLLTRIGGER + LENIS SMOOTH SCROLLYTELLING</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">360° PRODUCT CARDS &amp; LIVE 3D CAN PERSONALIZER</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">SHOPPABLE REELS, MIXOLOGY RECIPES &amp; CART DRAWER</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">TECHNICAL SEO SCHEMA + WHATSAPP ORDER CHECKOUT</div>
+                        </div>
+                    </div>
+
+                    <div class="content-group">
+                        <h2>Performance &amp; Capability Highlights</h2>
+                        <div style="margin-top: 15px; margin-bottom: 25px;">
+                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.05em;">Built for Speed, Visual Impact &amp; Conversion.</span>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 15px;">
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: #1e3a2f; line-height: 1;">60 FPS</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Real-Time 3D WebGL</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Zero external 3D model bloat • Instant load</div>
+                                </div>
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: #1e3a2f; line-height: 1;">4 Flavours</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Live 3D Personalizer</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Dynamic canvas textures &amp; custom name print</div>
+                                </div>
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: #1e3a2f; line-height: 1;">100%</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">On-Page Technical SEO</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">JSON-LD Product &amp; FAQ Schema • OG Cards</div>
+                                </div>
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: #1e3a2f; line-height: 1;">D2C Ready</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Interactive Commerce</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Shoppable reels • Cart drawer • WhatsApp checkout</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-group" style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 24px; padding: 32px; position: relative;">
+                        <span style="font-size: 3.5rem; color: rgba(198, 146, 20, 0.2); position: absolute; top: 10px; left: 20px; font-family: Georgia, serif; line-height: 1;">★</span>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--text-charcoal); margin-bottom: 16px; padding-left: 24px;">Want a 3D Animated Website for Your Brand?</h3>
+                        <p style="font-size: 0.98rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 20px;">
+                            Whether you are launching a D2C beverage, cosmetics line, luxury product, or tech brand, Growvia Solutions can engineer a custom 3D scrollytelling experience that makes your product unforgettable while keeping SEO and mobile conversions front and center.
+                        </p>
+                        <div style="border-top: 1px solid var(--border-soft); padding-top: 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+                            <div>
+                                <strong style="color: var(--text-charcoal); font-size: 0.95rem;">Saumya Bansal — Founder, Growvia Solutions</strong>
+                                <span style="display: block; font-size: 0.8rem; color: var(--text-muted);">3D Web Development • GSAP Animation • Technical SEO</span>
+                            </div>
+                            <a href="https://fizze.vercel.app/" target="_blank" class="glow-pill-btn" style="padding: 10px 20px; font-size: 0.85rem; text-decoration: none; color: white;">Try Live 3D Demo →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="meta-info">
+                    <div class="meta-sidebar">
+                        <h3>Project Info</h3>
+                        <ul class="meta-list">
+                            <li>
+                                <span class="meta-label">Project Type</span>
+                                <span class="meta-val">In-House 3D Concept &amp; Flagship Showcase (Growvia Creative Lab)</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Built By</span>
+                                <span class="meta-val">Saumya Bansal — Growvia Solutions</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Industry</span>
+                                <span class="meta-val">D2C Beverage, FMCG &amp; Interactive E-Commerce</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Tech Stack</span>
+                                <span class="meta-val">Three.js (WebGL), GSAP ScrollTrigger, Lenis Smooth Scroll, Vite, Web Audio API</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Live Website</span>
+                                <span class="meta-val"><a href="https://fizze.vercel.app/" target="_blank" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;">fizze.vercel.app ↗</a></span>
+                            </li>
+                            <li>
+                                <span class="meta-label">GitHub Repository</span>
+                                <span class="meta-val"><a href="https://github.com/bansalsaumya/fizze" target="_blank" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;">github.com/bansalsaumya/fizze ↗</a></span>
+                            </li>
+                            <li>
+                                <span class="meta-label">SEO &amp; Schema</span>
+                                <span class="meta-val">JSON-LD Product &amp; FAQ Schema, Open Graph Cards, XML Sitemap &amp; PWA Manifest</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Commerce Flow</span>
+                                <span class="meta-val">360° Product Cards • Custom 3D Can Builder • Slide-Out Cart • WhatsApp Checkout</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="figma-footer" style="text-align: center; padding: 30px; border-top: 1px solid var(--border-soft); margin-top: 60px;">
+        <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 Growvia Solutions. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
