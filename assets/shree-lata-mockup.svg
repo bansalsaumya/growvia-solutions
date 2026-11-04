@@ -1,0 +1,388 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b132b"/>
+      <stop offset="50%" stop-color="#111d3d"/>
+      <stop offset="100%" stop-color="#090f24"/>
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="35%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="amberGlow" cx="80%" cy="35%" r="45%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="heroBanner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="55%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="blueBtn" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="goldBadge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="igRing" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#facc15"/>
+      <stop offset="50%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="phoneTitanium" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="screenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+    <filter id="dropShadow" x="-15%" y="-15%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#020617" flood-opacity="0.55"/>
+    </filter>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Crisp Studio Background -->
+  <rect width="1200" height="720" fill="url(#bgGrad)"/>
+  <circle cx="420" cy="340" r="380" fill="url(#blueGlow)"/>
+  <circle cx="960" cy="280" r="320" fill="url(#amberGlow)"/>
+
+  <!-- Top Metrics Pill Strip -->
+  <g transform="translate(42, 24)">
+    <rect x="0" y="0" width="270" height="32" rx="16" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="135" y="21" font-family="Arial, sans-serif" font-size="11.5" font-weight="800" fill="#60a5fa" text-anchor="middle" letter-spacing="0.8">★ NEXT.JS 16 FULL-STACK STORE</text>
+
+    <rect x="284" y="0" width="246" height="32" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <text x="407" y="21" font-family="Arial, sans-serif" font-size="11.5" font-weight="800" fill="#34d399" text-anchor="middle" letter-spacing="0.8">★ 4.6★ GOOGLE MAP RANKED</text>
+
+    <rect x="544" y="0" width="256" height="32" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="672" y="21" font-family="Arial, sans-serif" font-size="11.5" font-weight="800" fill="#fbbf24" text-anchor="middle" letter-spacing="0.8">★ 12.8K+ INSTAGRAM SHOPPERS</text>
+
+    <rect x="814" y="0" width="344" height="32" rx="16" fill="#1d4ed8"/>
+    <text x="986" y="21" font-family="Arial, sans-serif" font-size="11.5" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.8">🔒 https://www.shreelatastore.in</text>
+  </g>
+
+  <!-- ========================================================= -->
+  <!-- 1. LEFT: DESKTOP NEXT.JS E-COMMERCE STOREFRONT WINDOW     -->
+  <!-- ========================================================= -->
+  <g transform="translate(42, 74)" filter="url(#dropShadow)">
+    <!-- Outer Laptop/Monitor Window -->
+    <rect width="585" height="606" rx="18" fill="#ffffff" stroke="#334155" stroke-width="3"/>
+
+    <!-- Browser Chrome Bar -->
+    <path d="M0,18 Q0,0 18,0 L567,0 Q585,0 585,18 L585,40 L0,40 Z" fill="#0f172a"/>
+    <circle cx="22" cy="20" r="6" fill="#ef4444"/>
+    <circle cx="40" cy="20" r="6" fill="#f59e0b"/>
+    <circle cx="58" cy="20" r="6" fill="#22c55e"/>
+    <rect x="145" y="9" width="295" height="22" rx="11" fill="#1e293b" stroke="#334155"/>
+    <text x="292" y="24" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#94a3b8" text-anchor="middle">🔒 www.shreelatastore.in</text>
+
+    <!-- Announcement Strip -->
+    <rect x="0" y="40" width="585" height="26" fill="#1e3a8a"/>
+    <rect x="18" y="45" width="76" height="16" rx="8" fill="url(#goldBadge)"/>
+    <text x="56" y="56" font-family="Arial, sans-serif" font-size="9" font-weight="900" fill="#0f172a" text-anchor="middle">CATALOGUE</text>
+    <text x="106" y="57" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#e2e8f0">ONE STORE, MANY CATEGORIES • VATVA, AHMEDABAD</text>
+
+    <!-- Store Navbar -->
+    <rect x="0" y="66" width="585" height="54" fill="#ffffff"/>
+    <line x1="0" y1="120" x2="585" y2="120" stroke="#e2e8f0" stroke-width="1.5"/>
+
+    <!-- SL Logo Emblem -->
+    <circle cx="38" cy="93" r="18" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="38" y="99" font-family="Georgia, serif" font-size="15" font-weight="900" fill="#1d4ed8" text-anchor="middle">SL</text>
+    <text x="64" y="90" font-family="Arial, sans-serif" font-size="14" font-weight="900" fill="#0f172a">SHREE LATA</text>
+    <text x="64" y="103" font-family="Arial, sans-serif" font-size="8.5" font-weight="700" fill="#64748b" letter-spacing="0.5">GIFTS &amp; COMMUNICATION</text>
+
+    <!-- Search Input -->
+    <rect x="195" y="79" width="185" height="28" rx="14" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="212" y="97" font-family="Arial, sans-serif" font-size="10" fill="#64748b">🔍 Search mobiles, gifts...</text>
+
+    <!-- Nav Links -->
+    <text x="398" y="97" font-family="Arial, sans-serif" font-size="9.5" font-weight="800" fill="#d97706">HOME</text>
+    <text x="438" y="97" font-family="Arial, sans-serif" font-size="9.5" font-weight="700" fill="#334155">PRODUCTS</text>
+    <text x="502" y="97" font-family="Arial, sans-serif" font-size="9.5" font-weight="700" fill="#334155">CATEGORIES</text>
+
+    <!-- Hero Banner Card -->
+    <g transform="translate(20, 134)">
+      <rect width="545" height="218" rx="16" fill="url(#heroBanner)" stroke="#bfdbfe" stroke-width="1.5"/>
+
+      <!-- Left Hero Copy -->
+      <rect x="24" y="22" width="136" height="22" rx="11" fill="#ffffff" stroke="#93c5fd"/>
+      <text x="92" y="37" font-family="Arial, sans-serif" font-size="9.5" font-weight="800" fill="#1d4ed8" text-anchor="middle">SMART &amp; CONNECTED</text>
+
+      <text x="24" y="72" font-family="Arial, sans-serif" font-size="27" font-weight="900" fill="#0f172a">Mobiles &amp; Accessories.</text>
+      <text x="24" y="104" font-family="Arial, sans-serif" font-size="27" font-weight="900" fill="#1d4ed8">Stay Connected Daily.</text>
+
+      <text x="24" y="128" font-family="Arial, sans-serif" font-size="11" fill="#475569">Discover top-rated smartphones, fast chargers, ANC earbuds,</text>
+      <text x="24" y="144" font-family="Arial, sans-serif" font-size="11" fill="#475569">smartwatches &amp; curated gifts in Vatva, Ahmedabad.</text>
+
+      <!-- CTA Buttons -->
+      <rect x="24" y="164" width="118" height="34" rx="17" fill="url(#blueBtn)"/>
+      <text x="83" y="185" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">View Mobiles →</text>
+
+      <rect x="152" y="164" width="148" height="34" rx="17" fill="#ffffff" stroke="#22c55e" stroke-width="1.5"/>
+      <circle cx="170" cy="181" r="6" fill="#22c55e"/>
+      <text x="232" y="185" font-family="Arial, sans-serif" font-size="10.5" font-weight="800" fill="#15803d" text-anchor="middle">Enquire on WhatsApp</text>
+
+      <!-- Right Vector 3D Smartphones Display -->
+      <g transform="translate(348, 22)" filter="url(#cardShadow)">
+        <rect x="0" y="0" width="176" height="174" rx="14" fill="#ffffff" opacity="0.85"/>
+        <!-- Back Phone -->
+        <rect x="24" y="18" width="58" height="122" rx="10" fill="url(#phoneTitanium)" stroke="#94a3b8" stroke-width="1.5"/>
+        <circle cx="36" cy="30" r="4" fill="#0f172a" stroke="#64748b"/>
+        <circle cx="36" cy="41" r="4" fill="#0f172a" stroke="#64748b"/>
+        <!-- Front Display Phone 1 -->
+        <rect x="64" y="12" width="64" height="134" rx="11" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+        <rect x="68" y="16" width="56" height="126" rx="8" fill="url(#screenGlow)"/>
+        <rect x="84" y="20" width="24" height="5" rx="2.5" fill="#0f172a"/>
+        <text x="96" y="64" font-family="Arial, sans-serif" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle">10:09</text>
+        <!-- Front Display Phone 2 -->
+        <rect x="114" y="24" width="48" height="114" rx="9" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+        <rect x="118" y="28" width="40" height="106" rx="6" fill="#0284c7"/>
+        <text x="138" y="72" font-family="Arial, sans-serif" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle">5G</text>
+      </g>
+    </g>
+
+    <!-- Shop By Category Section -->
+    <text x="22" y="382" font-family="Arial, sans-serif" font-size="15" font-weight="900" fill="#0f172a">Shop By Category</text>
+    <text x="562" y="382" font-family="Arial, sans-serif" font-size="10.5" font-weight="800" fill="#2563eb" text-anchor="end">View All 12 Categories →</text>
+
+    <!-- 6 Crisp Category Cards -->
+    <g transform="translate(20, 396)">
+      <g transform="translate(0, 0)">
+        <rect width="84" height="74" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+        <rect x="28" y="12" width="28" height="28" rx="8" fill="#dbeafe"/>
+        <text x="42" y="31" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">📱</text>
+        <text x="42" y="56" font-family="Arial, sans-serif" font-size="9.5" font-weight="800" fill="#1e293b" text-anchor="middle">Mobiles</text>
+      </g>
+      <g transform="translate(92, 0)">
+        <rect width="84" height="74" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+        <rect x="28" y="12" width="28" height="28" rx="8" fill="#dbeafe"/>
+        <text x="42" y="31" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">🎧</text>
+        <text x="42" y="56" font-family="Arial, sans-serif" font-size="9.5" font-weight="800" fill="#1e293b" text-anchor="middle">Audio &amp; Buds</text>
+      </g>
+      <g transform="translate(184, 0)">
+        <rect width="84" height="74" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+        <rect x="28" y="12" width="28" height="28" rx="8" fill="#dbeafe"/>
+        <text x="42" y="31" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">⌚</text>
+        <text x="42" y="56" font-family="Arial, sans-serif" font-size="9.5" font-weight="800" fill="#1e293b" text-anchor="middle">Smart Watch</text>
+      </g>
+      <g transform="translate(276, 0)">
+        <rect width="84" height="74" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+        <rect x="28" y="12" width="28" height="28" rx="8" fill="#dbeafe"/>
+        <text x="42" y="31" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">🔋</text>
+        <text x="42" y="56" font-family="Arial, sans-serif" font-size="9.5" font-weight="800" fill="#1e293b" text-anchor="middle">Power Banks</text>
+      </g>
+      <g transform="translate(368, 0)">
+        <rect width="84" height="74" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+        <rect x="28" y="12" width="28" height="28" rx="8" fill="#fef3c7"/>
+        <text x="42" y="31" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">🎁</text>
+        <text x="42" y="56" font-family="Arial, sans-serif" font-size="9.5" font-weight="800" fill="#1e293b" text-anchor="middle">Gift Items</text>
+      </g>
+      <g transform="translate(460, 0)">
+        <rect width="85" height="74" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+        <rect x="28" y="12" width="28" height="28" rx="8" fill="#dcfce7"/>
+        <text x="42" y="31" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">⚡</text>
+        <text x="42" y="56" font-family="Arial, sans-serif" font-size="9.5" font-weight="800" fill="#1e293b" text-anchor="middle">Fast Chargers</text>
+      </g>
+    </g>
+
+    <!-- Bottom Featured Product Cards Strip -->
+    <g transform="translate(20, 484)">
+      <rect x="0" y="0" width="174" height="104" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+      <rect x="12" y="14" width="48" height="76" rx="8" fill="#eff6ff"/>
+      <rect x="24" y="22" width="24" height="58" rx="4" fill="#1e293b"/>
+      <text x="72" y="32" font-family="Arial, sans-serif" font-size="9" font-weight="800" fill="#16a34a">IN STOCK</text>
+      <text x="72" y="48" font-family="Arial, sans-serif" font-size="11.5" font-weight="900" fill="#0f172a">5G Smartphones</text>
+      <text x="72" y="63" font-family="Arial, sans-serif" font-size="9.5" fill="#64748b">New &amp; Verified Pre-Owned</text>
+      <rect x="72" y="72" width="88" height="20" rx="10" fill="#2563eb"/>
+      <text x="116" y="85" font-family="Arial, sans-serif" font-size="8.5" font-weight="800" fill="#ffffff" text-anchor="middle">Order on WhatsApp</text>
+
+      <rect x="185" y="0" width="174" height="104" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+      <rect x="197" y="14" width="48" height="76" rx="8" fill="#fef3c7"/>
+      <circle cx="221" cy="52" r="16" fill="#d97706"/>
+      <text x="257" y="32" font-family="Arial, sans-serif" font-size="9" font-weight="800" fill="#d97706">BESTSELLER</text>
+      <text x="257" y="48" font-family="Arial, sans-serif" font-size="11.5" font-weight="900" fill="#0f172a">Smart Watches</text>
+      <text x="257" y="63" font-family="Arial, sans-serif" font-size="9.5" fill="#64748b">AMOLED Bluetooth Calling</text>
+      <rect x="257" y="72" width="88" height="20" rx="10" fill="#2563eb"/>
+      <text x="301" y="85" font-family="Arial, sans-serif" font-size="8.5" font-weight="800" fill="#ffffff" text-anchor="middle">Order on WhatsApp</text>
+
+      <rect x="370" y="0" width="175" height="104" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+      <rect x="382" y="14" width="48" height="76" rx="8" fill="#dcfce7"/>
+      <circle cx="406" cy="52" r="16" fill="#16a34a"/>
+      <text x="442" y="32" font-family="Arial, sans-serif" font-size="9" font-weight="800" fill="#2563eb">GIFT STUDIO</text>
+      <text x="442" y="48" font-family="Arial, sans-serif" font-size="11.5" font-weight="900" fill="#0f172a">Gifts &amp; Gadgets</text>
+      <text x="442" y="63" font-family="Arial, sans-serif" font-size="9.5" fill="#64748b">Watches, Perfumes &amp; Toys</text>
+      <rect x="442" y="72" width="88" height="20" rx="10" fill="#2563eb"/>
+      <text x="486" y="85" font-family="Arial, sans-serif" font-size="8.5" font-weight="800" fill="#ffffff" text-anchor="middle">Order on WhatsApp</text>
+    </g>
+  </g>
+
+  <!-- ========================================================= -->
+  <!-- 2. CENTER: MOBILE RESPONSIVE IPHONE STOREFRONT            -->
+  <!-- ========================================================= -->
+  <g transform="translate(646, 74)" filter="url(#dropShadow)">
+    <!-- iPhone Bezel -->
+    <rect width="236" height="606" rx="34" fill="#0f172a" stroke="#475569" stroke-width="4"/>
+    <rect x="9" y="9" width="218" height="588" rx="26" fill="#ffffff"/>
+
+    <!-- Dynamic Island Notch -->
+    <rect x="76" y="17" width="84" height="20" rx="10" fill="#0f172a"/>
+    <text x="32" y="31" font-family="Arial, sans-serif" font-size="10" font-weight="800" fill="#0f172a">9:41</text>
+
+    <!-- Mobile App Header -->
+    <circle cx="34" cy="64" r="14" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="34" y="69" font-family="Georgia, serif" font-size="11" font-weight="900" fill="#1d4ed8" text-anchor="middle">SL</text>
+    <text x="54" y="62" font-family="Arial, sans-serif" font-size="12" font-weight="900" fill="#0f172a">SHREE LATA</text>
+    <text x="54" y="73" font-family="Arial, sans-serif" font-size="7.5" font-weight="700" fill="#64748b">VATVA, AHMEDABAD</text>
+    <circle cx="202" cy="64" r="13" fill="#eff6ff"/>
+    <text x="202" y="68" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">🛒</text>
+    <circle cx="211" cy="54" r="7" fill="#f59e0b"/>
+    <text x="211" y="57" font-family="Arial, sans-serif" font-size="8" font-weight="900" fill="#0f172a" text-anchor="middle">3</text>
+
+    <!-- Mobile Search -->
+    <rect x="20" y="88" width="196" height="28" rx="14" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="34" y="106" font-family="Arial, sans-serif" font-size="9.5" fill="#64748b">🔍 Search products, brands...</text>
+
+    <!-- Mobile Hero Card -->
+    <rect x="20" y="126" width="196" height="225" rx="16" fill="url(#heroBanner)" stroke="#bfdbfe"/>
+    <text x="34" y="150" font-family="Arial, sans-serif" font-size="8.5" font-weight="800" fill="#1d4ed8">SMART &amp; CONNECTED</text>
+    <text x="34" y="172" font-family="Arial, sans-serif" font-size="16" font-weight="900" fill="#0f172a">Mobiles &amp; Gadgets</text>
+    <text x="34" y="191" font-family="Arial, sans-serif" font-size="15" font-weight="900" fill="#1d4ed8">Best Local Prices.</text>
+
+    <!-- Mini Phone Illustration in Mobile Hero -->
+    <rect x="44" y="204" width="148" height="88" rx="10" fill="#ffffff"/>
+    <rect x="74" y="212" width="38" height="72" rx="6" fill="#0f172a"/>
+    <rect x="77" y="215" width="32" height="66" rx="4" fill="url(#screenGlow)"/>
+    <rect x="118" y="220" width="34" height="64" rx="6" fill="#1e293b"/>
+
+    <!-- Mobile Hero CTA -->
+    <rect x="32" y="304" width="82" height="30" rx="15" fill="url(#blueBtn)"/>
+    <text x="73" y="323" font-family="Arial, sans-serif" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle">Shop Now →</text>
+    <rect x="120" y="304" width="84" height="30" rx="15" fill="#22c55e"/>
+    <text x="162" y="323" font-family="Arial, sans-serif" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle">WhatsApp</text>
+
+    <!-- Mobile Category Grid -->
+    <text x="22" y="376" font-family="Arial, sans-serif" font-size="12.5" font-weight="900" fill="#0f172a">Top Categories</text>
+    <g transform="translate(20, 388)">
+      <rect x="0" y="0" width="93" height="84" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="46" y="38" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">📱</text>
+      <text x="46" y="64" font-family="Arial, sans-serif" font-size="10" font-weight="800" fill="#0f172a" text-anchor="middle">Smartphones</text>
+
+      <rect x="103" y="0" width="93" height="84" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="149" y="38" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">🎧</text>
+      <text x="149" y="64" font-family="Arial, sans-serif" font-size="10" font-weight="800" fill="#0f172a" text-anchor="middle">ANC Earbuds</text>
+
+      <rect x="0" y="94" width="93" height="84" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="46" y="132" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">⌚</text>
+      <text x="46" y="158" font-family="Arial, sans-serif" font-size="10" font-weight="800" fill="#0f172a" text-anchor="middle">Smart Watches</text>
+
+      <rect x="103" y="94" width="93" height="84" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="149" y="132" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">🎁</text>
+      <text x="149" y="158" font-family="Arial, sans-serif" font-size="10" font-weight="800" fill="#0f172a" text-anchor="middle">Gifts &amp; Toys</text>
+    </g>
+  </g>
+
+  <!-- ========================================================= -->
+  <!-- 3. RIGHT: INSTAGRAM 12.8K + GOOGLE BUSINESS 4.6★ CARD     -->
+  <!-- ========================================================= -->
+  <g transform="translate(900, 74)" filter="url(#dropShadow)">
+    <rect width="258" height="606" rx="22" fill="#ffffff" stroke="#334155" stroke-width="3"/>
+
+    <!-- Instagram Header -->
+    <text x="22" y="38" font-family="Georgia, serif" font-style="italic" font-size="21" font-weight="900" fill="#0f172a">Instagram</text>
+    <rect x="150" y="18" width="88" height="24" rx="12" fill="#fdf2f8" stroke="#ec4899"/>
+    <text x="194" y="34" font-family="Arial, sans-serif" font-size="9.5" font-weight="800" fill="#db2777" text-anchor="middle">@shreelatastore</text>
+
+    <!-- Profile Row + Stats -->
+    <circle cx="48" cy="86" r="28" fill="none" stroke="url(#igRing)" stroke-width="3.5"/>
+    <circle cx="48" cy="86" r="23" fill="#eff6ff"/>
+    <text x="48" y="93" font-family="Georgia, serif" font-size="18" font-weight="900" fill="#1d4ed8" text-anchor="middle">SL</text>
+
+    <text x="108" y="82" font-family="Arial, sans-serif" font-size="15" font-weight="900" fill="#0f172a" text-anchor="middle">478</text>
+    <text x="108" y="96" font-family="Arial, sans-serif" font-size="9.5" fill="#64748b" text-anchor="middle">posts</text>
+
+    <text x="166" y="82" font-family="Arial, sans-serif" font-size="15" font-weight="900" fill="#1d4ed8" text-anchor="middle">12.8K</text>
+    <text x="166" y="96" font-family="Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="middle">followers</text>
+
+    <text x="222" y="82" font-family="Arial, sans-serif" font-size="15" font-weight="900" fill="#0f172a" text-anchor="middle">12</text>
+    <text x="222" y="96" font-family="Arial, sans-serif" font-size="9.5" fill="#64748b" text-anchor="middle">following</text>
+
+    <!-- Bio (Fixed Location: Vatva, Ahmedabad!) -->
+    <text x="20" y="132" font-family="Arial, sans-serif" font-size="12" font-weight="900" fill="#0f172a">Shree Lata Gifts &amp; Communication</text>
+    <text x="20" y="149" font-family="Arial, sans-serif" font-size="10" fill="#334155">📱 Mobiles | Earbuds | Smart Watches | Gifts</text>
+    <text x="20" y="165" font-family="Arial, sans-serif" font-size="10" fill="#334155">⭐ Best Prices • Genuine Products • Trusted Store</text>
+    <text x="20" y="181" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#0f172a">📍 Vatva, Ahmedabad, Gujarat</text>
+    <text x="20" y="197" font-family="Arial, sans-serif" font-size="10" font-weight="800" fill="#1d4ed8">🔗 www.shreelatastore.in</text>
+
+    <!-- Follow / Message Buttons -->
+    <rect x="20" y="210" width="106" height="30" rx="8" fill="#2563eb"/>
+    <text x="73" y="229" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">Follow</text>
+    <rect x="132" y="210" width="106" height="30" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="185" y="229" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#0f172a" text-anchor="middle">WhatsApp</text>
+
+    <!-- Story Highlights -->
+    <g transform="translate(22, 254)">
+      <circle cx="20" cy="20" r="18" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+      <text x="20" y="25" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">⭐</text>
+      <text x="20" y="50" font-family="Arial, sans-serif" font-size="8.5" font-weight="700" fill="#475569" text-anchor="middle">New Arrivals</text>
+
+      <circle cx="72" cy="20" r="18" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+      <text x="72" y="25" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">📱</text>
+      <text x="72" y="50" font-family="Arial, sans-serif" font-size="8.5" font-weight="700" fill="#475569" text-anchor="middle">Mobiles</text>
+
+      <circle cx="124" cy="20" r="18" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+      <text x="124" y="25" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">🎧</text>
+      <text x="124" y="50" font-family="Arial, sans-serif" font-size="8.5" font-weight="700" fill="#475569" text-anchor="middle">Accessories</text>
+
+      <circle cx="176" cy="20" r="18" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+      <text x="176" y="25" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">🎁</text>
+      <text x="176" y="50" font-family="Arial, sans-serif" font-size="8.5" font-weight="700" fill="#475569" text-anchor="middle">Festive Gifts</text>
+    </g>
+
+    <!-- Instagram Reels / Posts Grid -->
+    <g transform="translate(18, 320)">
+      <rect x="0" y="0" width="70" height="92" rx="8" fill="#0f172a"/>
+      <text x="8" y="20" font-family="Arial, sans-serif" font-size="8.5" font-weight="900" fill="#fbbf24">UNBOXING</text>
+      <text x="8" y="34" font-family="Arial, sans-serif" font-size="9.5" font-weight="800" fill="#ffffff">Latest 5G</text>
+      <text x="8" y="46" font-family="Arial, sans-serif" font-size="9.5" font-weight="800" fill="#ffffff">Mobiles</text>
+      <text x="8" y="80" font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="#38bdf8">▶ 18.4K</text>
+
+      <rect x="76" y="0" width="70" height="92" rx="8" fill="#1d4ed8"/>
+      <text x="84" y="20" font-family="Arial, sans-serif" font-size="8.5" font-weight="900" fill="#fbbf24">DEAL ALERT</text>
+      <text x="84" y="34" font-family="Arial, sans-serif" font-size="9.5" font-weight="800" fill="#ffffff">ANC Buds</text>
+      <text x="84" y="46" font-family="Arial, sans-serif" font-size="9.5" font-weight="800" fill="#ffffff">&amp; Watches</text>
+      <text x="84" y="80" font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="#ffffff">▶ 14.2K</text>
+
+      <rect x="152" y="0" width="70" height="92" rx="8" fill="#1e293b"/>
+      <text x="160" y="20" font-family="Arial, sans-serif" font-size="8.5" font-weight="900" fill="#34d399">GIFT GUIDE</text>
+      <text x="160" y="34" font-family="Arial, sans-serif" font-size="9.5" font-weight="800" fill="#ffffff">Premium</text>
+      <text x="160" y="46" font-family="Arial, sans-serif" font-size="9.5" font-weight="800" fill="#ffffff">Gift Combos</text>
+      <text x="160" y="80" font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="#fbbf24">▶ 22.1K</text>
+    </g>
+
+    <!-- Google Business Profile Verified Local SEO Card -->
+    <g transform="translate(18, 428)">
+      <rect width="222" height="158" rx="14" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5"/>
+      <rect x="14" y="14" width="118" height="20" rx="10" fill="#1e3a8a"/>
+      <text x="73" y="28" font-family="Arial, sans-serif" font-size="8.5" font-weight="800" fill="#93c5fd" text-anchor="middle">📍 GOOGLE MAPS SEO</text>
+
+      <text x="14" y="54" font-family="Arial, sans-serif" font-size="13" font-weight="900" fill="#ffffff">Shree Lata Store — Vatva</text>
+      <text x="14" y="74" font-family="Arial, sans-serif" font-size="14" font-weight="900" fill="#fbbf24">4.6 ★★★★★</text>
+      <text x="115" y="73" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#94a3b8">(Verified GBP)</text>
+
+      <text x="14" y="96" font-family="Arial, sans-serif" font-size="9.5" fill="#cbd5e1">✓ Ranked Top Local Pack in Vatva</text>
+      <text x="14" y="112" font-family="Arial, sans-serif" font-size="9.5" fill="#cbd5e1">✓ Direct Store Calls &amp; Map Directions</text>
+
+      <rect x="14" y="124" width="194" height="22" rx="11" fill="#10b981"/>
+      <text x="111" y="139" font-family="Arial, sans-serif" font-size="9.5" font-weight="900" fill="#052e16" text-anchor="middle">OMNICHANNEL RETAIL GROWTH</text>
+    </g>
+  </g>
+</svg>
