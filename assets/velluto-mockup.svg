@@ -106,17 +106,17 @@
 
     <!-- Metrics Strip -->
     <g transform="translate(0, 412)">
-      <rect x="0" y="0" width="448" height="76" rx="14" fill="#fffaf3" stroke="#dfd0bc"/>
-      <text x="26" y="34" font-family="Georgia, serif" font-size="22" font-weight="900" fill="#241710">6 Chapters</text>
-      <text x="26" y="54" font-family="Arial, sans-serif" font-size="10.5" font-weight="800" fill="#8c725c">3D SCROLLYTELLING</text>
+      <rect x="0" y="0" width="456" height="76" rx="14" fill="#fffaf3" stroke="#dfd0bc"/>
+      <text x="80" y="34" font-family="Georgia, serif" font-size="20" font-weight="900" fill="#241710" text-anchor="middle">6 Chapters</text>
+      <text x="80" y="54" font-family="Arial, sans-serif" font-size="10" font-weight="800" fill="#8c725c" text-anchor="middle">3D SCROLLYTELLING</text>
 
-      <line x1="168" y1="14" x2="168" y2="62" stroke="#dfd0bc"/>
-      <text x="190" y="34" font-family="Georgia, serif" font-size="22" font-weight="900" fill="#b84a27">X-Ray 3D</text>
-      <text x="190" y="54" font-family="Arial, sans-serif" font-size="10.5" font-weight="800" fill="#8c725c">MOLTEN CORE CUTAWAY</text>
+      <line x1="160" y1="14" x2="160" y2="62" stroke="#dfd0bc"/>
+      <text x="244" y="34" font-family="Georgia, serif" font-size="20" font-weight="900" fill="#b84a27" text-anchor="middle">X-Ray 3D</text>
+      <text x="244" y="54" font-family="Arial, sans-serif" font-size="10" font-weight="800" fill="#8c725c" text-anchor="middle">MOLTEN CORE CUTAWAY</text>
 
       <line x1="326" y1="14" x2="326" y2="62" stroke="#dfd0bc"/>
-      <text x="348" y="34" font-family="Georgia, serif" font-size="22" font-weight="900" fill="#5d7c35">60 FPS</text>
-      <text x="348" y="54" font-family="Arial, sans-serif" font-size="10.5" font-weight="800" fill="#8c725c">MOBILE READY</text>
+      <text x="391" y="34" font-family="Georgia, serif" font-size="20" font-weight="900" fill="#5d7c35" text-anchor="middle">60 FPS</text>
+      <text x="391" y="54" font-family="Arial, sans-serif" font-size="10" font-weight="800" fill="#8c725c" text-anchor="middle">MOBILE READY</text>
     </g>
   </g>
 

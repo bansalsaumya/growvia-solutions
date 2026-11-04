@@ -84,17 +84,17 @@
 
     <!-- Metrics Strip -->
     <g transform="translate(0, 415)">
-      <rect x="0" y="0" width="432" height="74" rx="14" fill="#1f1f27" stroke="#323240"/>
-      <text x="30" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="#ffffff">4 Flavours</text>
-      <text x="30" y="54" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#8f8fa0">LIVE 3D MORPHING</text>
+      <rect x="0" y="0" width="450" height="74" rx="14" fill="#1f1f27" stroke="#323240"/>
+      <text x="77" y="34" font-family="Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">4 Flavours</text>
+      <text x="77" y="54" font-family="Arial, sans-serif" font-size="10.5" font-weight="700" fill="#8f8fa0" text-anchor="middle">LIVE 3D MORPHING</text>
 
-      <line x1="165" y1="14" x2="165" y2="60" stroke="#323240"/>
-      <text x="190" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="#ff4d47">60 FPS</text>
-      <text x="190" y="54" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#8f8fa0">WEBGL RENDERER</text>
+      <line x1="154" y1="14" x2="154" y2="60" stroke="#323240"/>
+      <text x="227" y="34" font-family="Arial, sans-serif" font-size="20" font-weight="900" fill="#ff4d47" text-anchor="middle">60 FPS</text>
+      <text x="227" y="54" font-family="Arial, sans-serif" font-size="10.5" font-weight="700" fill="#8f8fa0" text-anchor="middle">WEBGL RENDERER</text>
 
-      <line x1="305" y1="14" x2="305" y2="60" stroke="#323240"/>
-      <text x="328" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="#27c93f">0g Sugar</text>
-      <text x="328" y="54" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#8f8fa0">D2C SHOWCASE</text>
+      <line x1="300" y1="14" x2="300" y2="60" stroke="#323240"/>
+      <text x="375" y="34" font-family="Arial, sans-serif" font-size="20" font-weight="900" fill="#27c93f" text-anchor="middle">0g Sugar</text>
+      <text x="375" y="54" font-family="Arial, sans-serif" font-size="10.5" font-weight="700" fill="#8f8fa0" text-anchor="middle">D2C SHOWCASE</text>
     </g>
   </g>
 
