@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <radialGradient id="bg" cx="60%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#f7efe3"/>
+      <stop offset="58%" stop-color="#efe3d2"/>
+      <stop offset="100%" stop-color="#dfcbb0"/>
+    </radialGradient>
+    <radialGradient id="pistachioGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7fa655" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#7fa655" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="terracottaGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c95b3c" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#c95b3c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="waffleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d89a56"/>
+      <stop offset="50%" stop-color="#b97735"/>
+      <stop offset="100%" stop-color="#8a521d"/>
+    </linearGradient>
+    <radialGradient id="scoopPistachio" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#b6d38b"/>
+      <stop offset="55%" stop-color="#88ab58"/>
+      <stop offset="100%" stop-color="#5d7c35"/>
+    </radialGradient>
+    <radialGradient id="scoopFragola" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#f5989c"/>
+      <stop offset="55%" stop-color="#d95962"/>
+      <stop offset="100%" stop-color="#9e2f38"/>
+    </radialGradient>
+    <radialGradient id="scoopGianduja" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#8c583a"/>
+      <stop offset="55%" stop-color="#59321c"/>
+      <stop offset="100%" stop-color="#361b0c"/>
+    </radialGradient>
+    <linearGradient id="mokaMetal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b8aea2"/>
+      <stop offset="30%" stop-color="#ffffff"/>
+      <stop offset="58%" stop-color="#d7cfc5"/>
+      <stop offset="85%" stop-color="#9a9084"/>
+      <stop offset="100%" stop-color="#ece6de"/>
+    </linearGradient>
+    <linearGradient id="goldLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe082"/>
+      <stop offset="50%" stop-color="#d49b27"/>
+      <stop offset="100%" stop-color="#9c6b12"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#2c1d11" flood-opacity="0.22"/>
+    </filter>
+    <filter id="scoopShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#2c1d11" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Warm Sunlit Italian Alabaster Studio Background -->
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <circle cx="820" cy="320" r="320" fill="url(#pistachioGlow)"/>
+  <circle cx="660" cy="450" r="280" fill="url(#terracottaGlow)"/>
+
+  <!-- Giant Editorial Watermark Text -->
+  <text x="600" y="425" font-family="Georgia, 'Times New Roman', serif" font-size="180" font-weight="900" fill="#2c1d11" opacity="0.045" text-anchor="middle" letter-spacing="8">VELLUTO 3D</text>
+
+  <!-- Top Browser Bar Frame -->
+  <g transform="translate(60, 44)">
+    <rect width="1080" height="632" rx="22" fill="#fbf6ee" stroke="#decbb4" stroke-width="2" filter="url(#shadow)"/>
+    <rect width="1080" height="48" rx="22" fill="#f1e5d4"/>
+    <circle cx="28" cy="24" r="7" fill="#ff5f56"/>
+    <circle cx="50" cy="24" r="7" fill="#ffbd2e"/>
+    <circle cx="72" cy="24" r="7" fill="#27c93f"/>
+    <rect x="310" y="11" width="460" height="26" rx="13" fill="#fffaf2" stroke="#d8c3a8"/>
+    <text x="540" y="29" font-family="Arial, sans-serif" font-size="12.5" font-weight="700" fill="#5e4938" text-anchor="middle">🔒 https://bansalsaumya.github.io/velluto-gelato/</text>
+    <rect x="895" y="12" width="160" height="24" rx="12" fill="#b84a27"/>
+    <text x="975" y="28" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">3D GELATO + MOKA</text>
+  </g>
+
+  <!-- Subtle Giant Editorial Background Word Inside Viewport -->
+  <text x="825" y="290" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-weight="900" fill="#5d7c35" opacity="0.11" text-anchor="middle" letter-spacing="6">BRONTE</text>
+  <text x="825" y="385" font-family="Georgia, 'Times New Roman', serif" font-size="82" font-style="italic" font-weight="700" fill="#b84a27" opacity="0.10" text-anchor="middle">Pistacchio</text>
+
+  <!-- Left Hero Content Inside Frame -->
+  <g transform="translate(115, 140)">
+    <rect x="0" y="0" width="310" height="32" rx="16" fill="#f3e3d3" stroke="#b84a27" stroke-width="1.5"/>
+    <text x="155" y="21" font-family="Arial, sans-serif" font-size="11.5" font-weight="800" fill="#b84a27" text-anchor="middle" letter-spacing="1.2">★ FIRENZE · ARTISANAL 3D ATELIER</text>
+
+    <text x="0" y="96" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="900" fill="#241710" letter-spacing="1">CASA</text>
+    <text x="0" y="168" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-style="italic" font-weight="900" fill="#b84a27" letter-spacing="1">VELLUTO.</text>
+
+    <text x="0" y="212" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#4a3728">3D Italian Gelateria &amp; Stovetop Moka Roastery</text>
+    <text x="0" y="242" font-family="Arial, sans-serif" font-size="14" fill="#6e5644">• Sculpted 3D Gelato Cones, X-Ray Core &amp; Spoon Bite</text>
+    <text x="0" y="266" font-family="Arial, sans-serif" font-size="14" fill="#6e5644">• Live 6-Flavour Color &amp; Typography Theme Switcher</text>
+    <text x="0" y="290" font-family="Arial, sans-serif" font-size="14" fill="#6e5644">• Interactive 3D Affogato Pour &amp; Custom Cone Architect</text>
+    <text x="0" y="314" font-family="Arial, sans-serif" font-size="14" fill="#6e5644">• Polaroid Postcard Generator, Table Pass &amp; Cart</text>
+
+    <!-- Feature Pills -->
+    <g transform="translate(0, 345)">
+      <rect x="0" y="0" width="132" height="38" rx="19" fill="#b84a27"/>
+      <text x="66" y="24" font-family="Arial, sans-serif" font-size="12.5" font-weight="800" fill="#ffffff" text-anchor="middle">THREE.JS 3D</text>
+
+      <rect x="144" y="0" width="148" height="38" rx="19" fill="#5d7c35"/>
+      <text x="218" y="24" font-family="Arial, sans-serif" font-size="12.5" font-weight="800" fill="#ffffff" text-anchor="middle">6 LIVE FLAVOURS</text>
+
+      <rect x="304" y="0" width="144" height="38" rx="19" fill="#f2e5d5" stroke="#cbb59b"/>
+      <text x="376" y="24" font-family="Arial, sans-serif" font-size="12.5" font-weight="800" fill="#3a271b" text-anchor="middle">3D AFFOGATO BAR</text>
+    </g>
+
+    <!-- Metrics Strip -->
+    <g transform="translate(0, 412)">
+      <rect x="0" y="0" width="448" height="76" rx="14" fill="#fffaf3" stroke="#dfd0bc"/>
+      <text x="26" y="34" font-family="Georgia, serif" font-size="22" font-weight="900" fill="#241710">6 Chapters</text>
+      <text x="26" y="54" font-family="Arial, sans-serif" font-size="10.5" font-weight="800" fill="#8c725c">3D SCROLLYTELLING</text>
+
+      <line x1="168" y1="14" x2="168" y2="62" stroke="#dfd0bc"/>
+      <text x="190" y="34" font-family="Georgia, serif" font-size="22" font-weight="900" fill="#b84a27">X-Ray 3D</text>
+      <text x="190" y="54" font-family="Arial, sans-serif" font-size="10.5" font-weight="800" fill="#8c725c">MOLTEN CORE CUTAWAY</text>
+
+      <line x1="326" y1="14" x2="326" y2="62" stroke="#dfd0bc"/>
+      <text x="348" y="34" font-family="Georgia, serif" font-size="22" font-weight="900" fill="#5d7c35">60 FPS</text>
+      <text x="348" y="54" font-family="Arial, sans-serif" font-size="10.5" font-weight="800" fill="#8c725c">MOBILE READY</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Supporting 3D Bialetti Octagonal Moka Pot (Left-Back of Gelato) -->
+  <g transform="translate(690, 445) rotate(-10) scale(0.82)" filter="url(#shadow)">
+    <!-- Base Chamber -->
+    <polygon points="-58,110 58,110 44,15 -44,15" fill="url(#mokaMetal)" stroke="#8c8275" stroke-width="2"/>
+    <!-- Waist Ring -->
+    <rect x="-46" y="4" width="92" height="14" rx="4" fill="#7a7064"/>
+    <!-- Brass Safety Valve -->
+    <circle cx="-28" cy="36" r="6" fill="url(#goldLeaf)"/>
+    <!-- Upper Collector -->
+    <polygon points="-44,4 44,4 62,-105 -62,-105" fill="url(#mokaMetal)" stroke="#8c8275" stroke-width="2"/>
+    <!-- Lid & Finial -->
+    <polygon points="-64,-105 64,-105 46,-126 -46,-126" fill="#d8d0c5" stroke="#8c8275" stroke-width="2"/>
+    <rect x="-12" y="-146" width="24" height="20" rx="6" fill="#2b1d14"/>
+    <!-- Bakelite Handle -->
+    <path d="M52,-88 L88,-88 L92,-12 L50,0" fill="none" stroke="#2b1d14" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+
+  <!-- Center Hero 3D Artisanal Triple-Scoop Gelato Cone -->
+  <g transform="translate(885, 395) rotate(5)" filter="url(#shadow)">
+    <!-- Engraved Waffle Cone -->
+    <polygon points="-78,-10 78,-10 0,225" fill="url(#waffleGrad)" stroke="#7a4616" stroke-width="2.5"/>
+    <!-- Waffle Grid Lines -->
+    <line x1="-56" y1="15" x2="28" y2="140" stroke="#69390f" stroke-width="2" opacity="0.55"/>
+    <line x1="-30" y1="0" x2="45" y2="95" stroke="#69390f" stroke-width="2" opacity="0.55"/>
+    <line x1="56" y1="15" x2="-28" y2="140" stroke="#69390f" stroke-width="2" opacity="0.55"/>
+    <line x1="30" y1="0" x2="-45" y2="95" stroke="#69390f" stroke-width="2" opacity="0.55"/>
+    <!-- Dark Chocolate Dipped Collar -->
+    <path d="M-82,-12 Q-40,18 0,-6 Q40,18 82,-12 L74,22 Q38,42 0,20 Q-38,42 -74,22 Z" fill="#32180a"/>
+
+    <!-- Bottom Left Scoop: Gianduja Reale -->
+    <g transform="translate(-38, -45)" filter="url(#scoopShadow)">
+      <circle cx="0" cy="0" r="56" fill="url(#scoopGianduja)"/>
+      <path d="M-54,18 Q-25,38 0,24 Q28,38 54,18" fill="none" stroke="#361b0c" stroke-width="10" stroke-linecap="round"/>
+    </g>
+
+    <!-- Bottom Right Scoop: Fragola di Bosco -->
+    <g transform="translate(40, -48)" filter="url(#scoopShadow)">
+      <circle cx="0" cy="0" r="56" fill="url(#scoopFragola)"/>
+      <circle cx="-18" cy="-14" r="3" fill="#ffe3e5" opacity="0.7"/>
+      <circle cx="22" cy="-6" r="2.5" fill="#ffe3e5" opacity="0.7"/>
+      <circle cx="8" cy="18" r="3" fill="#ffe3e5" opacity="0.7"/>
+    </g>
+
+    <!-- Top Crown Scoop: Pistacchio di Bronte DOP -->
+    <g transform="translate(0, -118)" filter="url(#scoopShadow)">
+      <circle cx="0" cy="0" r="64" fill="url(#scoopPistachio)"/>
+      <!-- Creamy Ripple Skirt -->
+      <path d="M-60,22 Q-30,44 0,28 Q30,44 60,22" fill="none" stroke="#759946" stroke-width="12" stroke-linecap="round"/>
+      <!-- Glossy Molten Syrupy Drizzle -->
+      <path d="M-42,-24 Q0,-48 42,-20 Q22,8 -10,-6 Q-28,12 -42,-24 Z" fill="#4f6d29" opacity="0.55"/>
+      <!-- Crushed Bronte Pistachio Crumbs -->
+      <circle cx="-22" cy="-18" r="4" fill="#d7ec9b"/>
+      <circle cx="18" cy="-26" r="3.5" fill="#d7ec9b"/>
+      <circle cx="28" cy="-4" r="4" fill="#c5e07b"/>
+      <circle cx="-8" cy="6" r="3.5" fill="#d7ec9b"/>
+      <!-- 24K Edible Gold Leaf Flake -->
+      <polygon points="-6,-56 14,-68 22,-48 2,-42" fill="url(#goldLeaf)"/>
+      <!-- Artisanal Dark Chocolate Wafer Medallion -->
+      <g transform="translate(46, -42) rotate(22)">
+        <circle cx="0" cy="0" r="22" fill="#2e1609" stroke="url(#goldLeaf)" stroke-width="2.5"/>
+        <text x="0" y="5" font-family="Georgia, serif" font-size="11" font-weight="900" fill="#ffe082" text-anchor="middle">CV</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Floating Interactive Flavour Switcher Pill Bar Preview (Bottom Right) -->
+  <g transform="translate(650, 588)" filter="url(#shadow)">
+    <rect x="0" y="0" width="430" height="48" rx="24" fill="#241710" opacity="0.94"/>
+    <circle cx="34" cy="24" r="11" fill="#88ab58" stroke="#ffffff" stroke-width="2"/>
+    <text x="98" y="29" font-family="Arial, sans-serif" font-size="11.5" font-weight="800" fill="#ffffff" text-anchor="middle">PISTACCHIO</text>
+    <circle cx="176" cy="24" r="9" fill="#d95962"/>
+    <circle cx="212" cy="24" r="9" fill="#59321c"/>
+    <circle cx="248" cy="24" r="9" fill="#f3a833"/>
+    <circle cx="284" cy="24" r="9" fill="#f5ede0"/>
+    <rect x="316" y="9" width="102" height="30" rx="15" fill="url(#goldLeaf)"/>
+    <text x="367" y="28" font-family="Arial, sans-serif" font-size="10.5" font-weight="900" fill="#241710" text-anchor="middle">🔪 X-RAY 3D</text>
+  </g>
+</svg>

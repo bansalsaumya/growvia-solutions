@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Velluto 3D Gelateria &amp; Moka Atelier | Saumya Bansal - Growvia Solutions</title>
+    <meta name="description" content="Explore Casa Velluto — an interactive 3D WebGL Italian Gelateria &amp; Stovetop Moka Roastery showcase engineered by Saumya Bansal (Growvia Solutions) using Three.js, GSAP ScrollTrigger, Lenis, and Web Audio ASMR.">
+    <link rel="icon" type="image/svg+xml" href="growvia-logo-purple-orange.svg">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-charcoal);
+            font-family: 'Poppins', sans-serif;
+        }
+        .study-container {
+            max-width: 1400px;
+            margin: 120px auto 60px;
+            padding: 0 24px;
+        }
+        .study-wrapper-card {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 32px;
+            padding: 64px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+        }
+        .study-header {
+            margin-bottom: 48px;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 32px;
+        }
+        .study-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: rgba(242, 101, 34, 0.1);
+            color: var(--accent-gold);
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .study-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-charcoal);
+            line-height: 1.15;
+        }
+        .study-intro {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-top: 12px;
+        }
+        .back-link-custom {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 700;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+        .back-link-custom:hover {
+            transform: translateX(-5px);
+        }
+        .grid-detail-sections {
+            display: grid;
+            grid-template-columns: 1.6fr 0.8fr;
+            gap: 48px;
+            align-items: start;
+        }
+        .content-group {
+            margin-bottom: 48px;
+        }
+        .content-group h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-charcoal);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .content-group h2::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 24px;
+            background-color: var(--accent-gold);
+            border-radius: 4px;
+        }
+        .content-group p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .meta-sidebar {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-soft);
+            border-radius: 24px;
+            padding: 32px;
+        }
+        .meta-sidebar h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 12px;
+        }
+        .meta-list {
+            list-style: none;
+            padding: 0;
+        }
+        .meta-list li {
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 12px;
+        }
+        .meta-label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .meta-val {
+            font-weight: 700;
+            color: var(--text-charcoal);
+            font-size: 1rem;
+        }
+        .detailed-list {
+            list-style: none;
+            padding: 0;
+        }
+        .detailed-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 16px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .detailed-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-gold);
+            font-weight: 900;
+        }
+        .glow-pill-btn {
+            background-color: var(--accent-gold);
+            border: none;
+            border-radius: 999px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        .glow-pill-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(242, 101, 34, 0.3);
+        }
+        .border-pill-btn {
+            border: 2px solid;
+            border-radius: 999px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        .border-pill-btn:hover {
+            transform: translateY(-2px);
+        }
+        @media (max-width: 992px) {
+            .grid-detail-sections {
+                grid-template-columns: 1fr;
+            }
+            .study-wrapper-card {
+                padding: 32px 24px;
+            }
+            .study-header h1 {
+                font-size: 2.2rem;
+            }
+            .header-container {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .nav-links {
+                gap: 14px !important;
+                font-size: 0.85rem;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header navigation matching current site -->
+    <header class="app-header" style="position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-soft);">
+        <div class="header-container" style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" class="logo" style="display: inline-flex; align-items: center; font-size: 1.4rem; font-weight: 800; text-decoration: none; color: var(--text-charcoal); letter-spacing: -0.4px;">
+                <span>Growvia <span style="color: var(--accent-gold); font-weight: 700;">Solutions</span><span style="color: var(--accent-gold);">.</span></span>
+            </a>
+            <nav class="nav-links" style="display: flex; gap: 24px;">
+                <a href="index.html#home" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">Home</a>
+                <a href="index.html#about" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">About us</a>
+                <a href="index.html#services" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">Services</a>
+                <a href="index.html#projects" class="nav-link active" style="text-decoration: none; color: var(--accent-gold); font-weight: 600;">Projects</a>
+                <a href="index.html#contact" class="nav-link" style="text-decoration: none; color: var(--text-charcoal); font-weight: 500;">Contact us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="study-container">
+        <a href="index.html#projects" class="back-link-custom">← Back to Projects</a>
+
+        <div class="study-wrapper-card">
+            
+            <div class="study-header">
+                <span class="study-badge">In-House 3D Concept &amp; Luxury F&amp;B Showcase</span>
+                <h1>08 — CASA VELLUTO — 3D Italian Gelateria &amp; Stovetop Moka Atelier</h1>
+                <p class="study-intro">Growvia Creative Lab Showcase — Sculpted Three.js 3D Gelato Cones, X-Ray Molten Core Cutaway, Live 6-Flavour Theme Switcher, Interactive 3D Affogato Bar, Custom Cone Architect &amp; Table Reservation Pass</p>
+                <div style="margin-top: 24px; display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://bansalsaumya.github.io/velluto-gelato/" target="_blank" class="glow-pill-btn" style="padding: 12px 24px; font-size: 0.85rem; text-decoration: none; color: white;">Launch Live 3D Website <span>→</span></a>
+                    <a href="https://github.com/bansalsaumya/velluto-gelato" target="_blank" class="glow-pill-btn" style="padding: 12px 24px; font-size: 0.85rem; text-decoration: none; color: white; background-color: var(--text-charcoal);">View GitHub Repository <span>→</span></a>
+                    <a href="https://wa.me/917435967985?text=Hi%20Saumya!%20I%20saw%20your%20Casa%20Velluto%203D%20Gelateria%20Website%20and%20want%20to%20discuss%20a%20similar%20project." target="_blank" class="border-pill-btn" style="padding: 12px 24px; font-size: 0.85rem; text-decoration: none; color: var(--text-charcoal); border-color: var(--text-charcoal);">Build a Similar 3D Site <span>→</span></a>
+                </div>
+                <div style="margin-top: 32px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-soft); box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                    <img src="assets/velluto-mockup.svg" alt="Casa Velluto Interactive 3D Italian Gelateria &amp; Moka Roastery Website Showcase by Growvia Solutions" style="width: 100%; height: auto; display: block;">
+                </div>
+            </div>
+
+            <div class="grid-detail-sections">
+                <div>
+                    <div class="content-group">
+                        <h2>The Concept &amp; Vision</h2>
+                        <p>
+                            <strong>CASA VELLUTO</strong> is an artisanal 3D WebGL culinary and luxury hospitality showcase engineered at <strong>Growvia Solutions</strong>. Designed with a sunlit Italian Alabaster, Terracotta &amp; Bronte Pistachio aesthetic, it reimagines how specialty cafés, dessert boutiques, and luxury F&amp;B brands can blend interactive 3D storytelling with instant table reservations and D2C ordering.
+                        </p>
+                        <p>
+                            Every visual element in the 6-chapter experience — from the diamond-embossed waffle cone, organic ridged gelato scoops, and glossy syrup ribbons to the octagonal Bialetti stovetop Moka pot and porcelain Affogato cup — is sculpted procedurally in real time using <strong>Three.js</strong>, <strong>GSAP ScrollTrigger</strong>, and <strong>Lenis Smooth Scroll</strong> with zero external `.glb` file weight.
+                        </p>
+                    </div>
+
+                    <div class="content-group">
+                        <h2>Key Features Engineered</h2>
+                        <ul class="detailed-list">
+                            <li><strong>🍦 Procedural 3D Triple-Scoop Gelato Cone &amp; Moka Pot (Three.js)</strong>: Custom-sculpted organic gelato domes with creamy bottom ripples, glossy syrup drips, crushed Bronte pistachio &amp; hazelnut inclusions, 24K gold leaf flakes, and a rotating octagonal stovetop espresso maker.</li>
+                            <li><strong>🎨 Live 6-Flavour Color &amp; Editorial Poster Word Switcher</strong>: Clicking any of the 6 signature flavours (<em>Pistacchio di Bronte DOP</em>, <em>Fragola di Bosco</em>, <em>Gianduja Reale</em>, <em>Mango Alphonso Solare</em>, <em>Fior di Latte</em>, or <em>Caffè Ristretto</em>) or <code>← / →</code> arrows dynamically morphs the 3D top scoop, giant editorial background typography, and the entire page's ambient studio gradient.</li>
+                            <li><strong>🔪 3D X-Ray Molten Core Cutaway &amp; Golden Spoon Bite</strong>: Interactive <code>🔪 X-RAY CORE</code> mode slices the top scoop open in 3D to reveal its glowing liquid pistachio/chocolate heart, while <code>🥄 TAKE A 3D BITE</code> animates a golden tasting spoon scooping out a live bite mark.</li>
+                            <li><strong>☕ Chapter III Interactive 3D Affogato Bar</strong>: Users can pick from 4 live 3D gelato scoops inside the porcelain cup, choose between 3 coffee roasts, and trigger a live <strong>"Pour Hot Espresso on Ice Cream"</strong> 3D stream animation that melts the scoop into golden crema foam.</li>
+                            <li><strong>✨ Il Tuo Cono — Custom 3D Cone Architect &amp; Polaroid Generator</strong>: Full 3-scoop customizer with Vessel selector (Crispy Waffle, Dark Dipped, Brioche), Crown Toppings (24K Gold Leaf, Bronte Crumbs, Amarena Drizzle), <code>🎲 Surprise Combo</code>, and a 1-click <strong>3D Polaroid Postcard</strong> snapshot download.</li>
+                            <li><strong>📅 Flagship Café Table Reservation &amp; WhatsApp Concierge</strong>: Interactive booking engine for Mumbai, New Delhi &amp; Bengaluru boutiques that generates an instant digital pass (<code>PASS #CV-XXX</code>) and pre-fills a direct WhatsApp confirmation to <code>+91 7435967985</code>.</li>
+                            <li><strong>📱 100% Mobile-Responsive 3D Framing &amp; Hinglish FAQ</strong>: Adaptive portrait camera framing on smartphones, smooth touch scrolling over the 3D canvas, and an interactive Hinglish customer FAQ accordion.</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-group">
+                        <h2>Architecture &amp; Execution Flow</h2>
+                        <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 16px; padding: 24px; text-align: center; margin-top: 15px;">
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">PROCEDURAL THREE.JS 3D GELATO CONE &amp; MOKA POT</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">LIVE 6-FLAVOUR THEME SWITCHER + X-RAY MOLTEN CORE</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">EXPLODED 3D ANATOMY &amp; INTERACTIVE AFFOGATO POUR</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">CUSTOM 3D CONE ARCHITECT &amp; POLAROID POSTCARD EXPORT</div>
+                            <div style="color: var(--accent-gold); font-size: 1.2rem; margin: 6px 0;">↓</div>
+                            <div style="font-weight: 800; color: #1e3a2f; font-size: 1.1rem;">TABLE RESERVATION PASS + WHATSAPP D2C CHECKOUT</div>
+                        </div>
+                    </div>
+
+                    <div class="content-group">
+                        <h2>Performance &amp; Capability Highlights</h2>
+                        <div style="margin-top: 15px; margin-bottom: 25px;">
+                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.05em;">Engineered for Luxury Storytelling, Zero Bloat &amp; Mobile Conversion.</span>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 15px;">
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: #1e3a2f; line-height: 1;">6 Chapters</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">3D Scrollytelling</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Exploded anatomy • Affogato Bar • Customizer</div>
+                                </div>
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: #1e3a2f; line-height: 1;">6 Flavours</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Live Theme Morphing</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">3D scoop, background colour &amp; poster typography</div>
+                                </div>
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: #1e3a2f; line-height: 1;">X-Ray 3D</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Interactive Tactility</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Molten core slice • Golden spoon bite • Polaroid</div>
+                                </div>
+                                <div style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 12px; padding: 20px;">
+                                    <div style="font-size: 2.2rem; font-weight: 800; color: #1e3a2f; line-height: 1;">O2O Ready</div>
+                                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-charcoal); margin-top: 8px;">Café + D2C Commerce</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Table Pass booking • Tasting Ticket • WhatsApp</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-group" style="background-color: var(--bg-light); border: 1px solid var(--border-soft); border-radius: 24px; padding: 32px; position: relative;">
+                        <span style="font-size: 3.5rem; color: rgba(198, 146, 20, 0.2); position: absolute; top: 10px; left: 20px; font-family: Georgia, serif; line-height: 1;">★</span>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--text-charcoal); margin-bottom: 16px; padding-left: 24px;">Want an Artisanal 3D Website for Your Café, Restaurant or D2C Brand?</h3>
+                        <p style="font-size: 0.98rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 20px;">
+                            From specialty coffee roasteries and artisanal dessert boutiques to luxury D2C brands, Growvia Solutions engineers custom 3D WebGL experiences that blend unforgettable visual storytelling with instant WhatsApp ordering and table reservations.
+                        </p>
+                        <div style="border-top: 1px solid var(--border-soft); padding-top: 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+                            <div>
+                                <strong style="color: var(--text-charcoal); font-size: 0.95rem;">Saumya Bansal — Founder, Growvia Solutions</strong>
+                                <span style="display: block; font-size: 0.8rem; color: var(--text-muted);">3D Web Development • GSAP Animation • Technical SEO</span>
+                            </div>
+                            <a href="https://bansalsaumya.github.io/velluto-gelato/" target="_blank" class="glow-pill-btn" style="padding: 10px 20px; font-size: 0.85rem; text-decoration: none; color: white;">Try Live 3D Demo →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="meta-info">
+                    <div class="meta-sidebar">
+                        <h3>Project Info</h3>
+                        <ul class="meta-list">
+                            <li>
+                                <span class="meta-label">Project Type</span>
+                                <span class="meta-val">In-House 3D Concept &amp; Luxury F&amp;B Showcase (Growvia Creative Lab)</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Built By</span>
+                                <span class="meta-val">Saumya Bansal — Growvia Solutions</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Industry</span>
+                                <span class="meta-val">Artisanal Gelateria, Specialty Coffee Roastery &amp; D2C Hospitality</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Tech Stack</span>
+                                <span class="meta-val">Three.js (WebGL), GSAP ScrollTrigger, Lenis Smooth Scroll, Vite, Web Audio ASMR</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Live Website</span>
+                                <span class="meta-val"><a href="https://bansalsaumya.github.io/velluto-gelato/" target="_blank" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;">bansalsaumya.github.io/velluto-gelato ↗</a></span>
+                            </li>
+                            <li>
+                                <span class="meta-label">GitHub Repository</span>
+                                <span class="meta-val"><a href="https://github.com/bansalsaumya/velluto-gelato" target="_blank" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;">github.com/bansalsaumya/velluto-gelato ↗</a></span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Interactive 3D Modes</span>
+                                <span class="meta-val">6-Flavour Live Switcher • X-Ray Core Cutaway • Golden Spoon Bite • 3D Affogato Pour</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Commerce &amp; O2O Flow</span>
+                                <span class="meta-val">3-Scoop Cone Architect • 3D Polaroid Snapshot • Café Table Pass • Tasting Ticket Drawer</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 32px; padding: 24px 32px; background: white; border: 1px solid var(--border-soft); border-radius: 20px;">
+            <a href="project-fizze.html" style="text-decoration: none; color: var(--text-charcoal); font-weight: 700;">← 07: FIZZÉ 3D Beverage</a>
+            <a href="index.html#projects" style="text-decoration: none; color: var(--text-muted); font-weight: 600; font-size: 0.9rem;">All Projects</a>
+            <a href="project-roe.html" style="text-decoration: none; color: var(--accent-gold); font-weight: 700;">01: Aarohi Enterprise →</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="figma-footer" style="text-align: center; padding: 30px; border-top: 1px solid var(--border-soft); margin-top: 60px;">
+        <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 Growvia Solutions. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
